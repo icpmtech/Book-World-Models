@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8f9fc" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Why LLMs Fall Short in Financial Markets</text>
+
+  <!-- LLM Box -->
+  <rect x="40" y="60" width="320" height="320" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <rect x="40" y="60" width="320" height="40" rx="10" fill="#e74c3c"/>
+  <text x="200" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Large Language Model</text>
+
+  <!-- LLM items -->
+  <circle cx="70" cy="135" r="6" fill="#e74c3c"/>
+  <text x="85" y="140" font-size="12" fill="#333">Predicts next token from text</text>
+
+  <circle cx="70" cy="165" r="6" fill="#e74c3c"/>
+  <text x="85" y="170" font-size="12" fill="#333">Statistically describes past events</text>
+
+  <circle cx="70" cy="195" r="6" fill="#e74c3c"/>
+  <text x="85" y="200" font-size="12" fill="#333">No internal causal model</text>
+
+  <circle cx="70" cy="225" r="6" fill="#e74c3c"/>
+  <text x="85" y="230" font-size="12" fill="#333">Cannot simulate future states</text>
+
+  <circle cx="70" cy="255" r="6" fill="#e74c3c"/>
+  <text x="85" y="260" font-size="12" fill="#333">Ignores feedback loops</text>
+
+  <circle cx="70" cy="285" r="6" fill="#e74c3c"/>
+  <text x="85" y="290" font-size="12" fill="#333">Returns averages, not distributions</text>
+
+  <circle cx="70" cy="315" r="6" fill="#e74c3c"/>
+  <text x="85" y="320" font-size="12" fill="#333">No regime-shift awareness</text>
+
+  <!-- LLM output label -->
+  <rect x="70" y="335" width="250" height="30" rx="6" fill="#fdecea"/>
+  <text x="195" y="355" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">Output: Qualitative narrative</text>
+
+  <!-- VS -->
+  <text x="400" y="230" text-anchor="middle" font-size="24" font-weight="bold" fill="#7f8c8d">VS</text>
+
+  <!-- World Model Box -->
+  <rect x="440" y="60" width="320" height="320" rx="10" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+  <rect x="440" y="60" width="320" height="40" rx="10" fill="#27ae60"/>
+  <text x="600" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">World Model</text>
+
+  <!-- World Model items -->
+  <circle cx="470" cy="135" r="6" fill="#27ae60"/>
+  <text x="485" y="140" font-size="12" fill="#333">Predicts next financial state</text>
+
+  <circle cx="470" cy="165" r="6" fill="#27ae60"/>
+  <text x="485" y="170" font-size="12" fill="#333">Simulates causal dynamics</text>
+
+  <circle cx="470" cy="195" r="6" fill="#27ae60"/>
+  <text x="485" y="200" font-size="12" fill="#333">Explicit causal structure</text>
+
+  <circle cx="470" cy="225" r="6" fill="#27ae60"/>
+  <text x="485" y="230" font-size="12" fill="#333">Generates probability distributions</text>
+
+  <circle cx="470" cy="255" r="6" fill="#27ae60"/>
+  <text x="485" y="260" font-size="12" fill="#333">Models feedback and regime shifts</text>
+
+  <circle cx="470" cy="285" r="6" fill="#27ae60"/>
+  <text x="485" y="290" font-size="12" fill="#333">Full uncertainty quantification</text>
+
+  <circle cx="470" cy="315" r="6" fill="#27ae60"/>
+  <text x="485" y="320" font-size="12" fill="#333">Detects hidden regime variables</text>
+
+  <!-- World Model output label -->
+  <rect x="470" y="335" width="250" height="30" rx="6" fill="#eafaf1"/>
+  <text x="595" y="355" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="bold">Output: Quantified actionable forecast</text>
+</svg>
