@@ -65,6 +65,11 @@ const config: Config = {
           label: 'Read the Book',
         },
         {
+          to: '/simulator',
+          position: 'left',
+          label: '🌍 Simulator',
+        },
+        {
           href: 'https://github.com/icpmtech/Book-World-Models',
           label: 'GitHub',
           position: 'right',

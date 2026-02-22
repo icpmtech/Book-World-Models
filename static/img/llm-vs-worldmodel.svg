@@ -1,0 +1,80 @@
+<svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <!-- Background -->
+  <rect width="820" height="320" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a4b8c">LLM vs World Model: Architectural Comparison</text>
+
+  <!-- === LLM Side === -->
+  <rect x="20" y="52" width="375" height="248" rx="10" fill="#fff" stroke="#1a4b8c" stroke-width="2"/>
+  <rect x="20" y="52" width="375" height="36" rx="10" fill="#1a4b8c"/>
+  <rect x="20" y="76" width="375" height="12" fill="#1a4b8c"/>
+  <text x="207" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Large Language Model (LLM)</text>
+
+  <!-- LLM flow boxes -->
+  <rect x="60" y="108" width="110" height="42" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="115" y="127" text-anchor="middle" font-size="11" fill="#1e40af">Text Input</text>
+  <text x="115" y="142" text-anchor="middle" font-size="10" fill="#3b82f6">"What if inflation rises?"</text>
+
+  <text x="185" y="132" text-anchor="middle" font-size="18" fill="#94a3b8">→</text>
+
+  <rect x="195" y="108" width="110" height="42" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="250" y="127" text-anchor="middle" font-size="11" fill="#1e40af">Transformer</text>
+  <text x="250" y="142" text-anchor="middle" font-size="10" fill="#3b82f6">P(token | context)</text>
+
+  <text x="320" y="132" text-anchor="middle" font-size="18" fill="#94a3b8">→</text>
+
+  <rect x="330" y="108" width="46" height="42" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="353" y="127" text-anchor="middle" font-size="10" fill="#1e40af">Text</text>
+  <text x="353" y="142" text-anchor="middle" font-size="10" fill="#1e40af">Out</text>
+
+  <!-- LLM output text -->
+  <rect x="44" y="168" width="332" height="70" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="210" y="184" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">"Inflation typically leads to higher</text>
+  <text x="210" y="198" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">interest rates, which may cause market</text>
+  <text x="210" y="212" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">volatility. Historically, sectors like...</text>
+  <text x="210" y="226" text-anchor="middle" font-size="10" fill="#94a3b8" font-style="italic">[no specific numbers, no causal model]</text>
+
+  <!-- LLM limitation tag -->
+  <rect x="44" y="252" width="332" height="34" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="60" y="268" font-size="10" fill="#dc2626">⚠ Describes statistical patterns from past text</text>
+  <text x="60" y="282" font-size="10" fill="#dc2626">⚠ Cannot simulate causal dynamics or future states</text>
+
+  <!-- === World Model Side === -->
+  <rect x="425" y="52" width="375" height="248" rx="10" fill="#fff" stroke="#0d6b3a" stroke-width="2"/>
+  <rect x="425" y="52" width="375" height="36" rx="10" fill="#0d6b3a"/>
+  <rect x="425" y="76" width="375" height="12" fill="#0d6b3a"/>
+  <text x="612" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">World Model</text>
+
+  <!-- World Model flow boxes -->
+  <rect x="432" y="108" width="112" height="42" rx="6" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="488" y="124" text-anchor="middle" font-size="11" fill="#065f46">State(t)</text>
+  <text x="488" y="138" text-anchor="middle" font-size="9" fill="#047857">inflation=7%, rates=2%</text>
+  <text x="488" y="149" text-anchor="middle" font-size="9" fill="#047857">liquidity=45</text>
+
+  <text x="557" y="132" text-anchor="middle" font-size="18" fill="#94a3b8">→</text>
+
+  <rect x="567" y="108" width="112" height="42" rx="6" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="623" y="124" text-anchor="middle" font-size="11" fill="#065f46">Transition</text>
+  <text x="623" y="136" text-anchor="middle" font-size="10" fill="#047857">f(s, a) → s'</text>
+  <text x="623" y="149" text-anchor="middle" font-size="9" fill="#047857">causal dynamics</text>
+
+  <text x="692" y="132" text-anchor="middle" font-size="18" fill="#94a3b8">→</text>
+
+  <rect x="701" y="108" width="90" height="42" rx="6" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="746" y="122" text-anchor="middle" font-size="10" fill="#065f46">State(t+1)</text>
+  <text x="746" y="134" text-anchor="middle" font-size="9" fill="#047857">+ Distribution</text>
+  <text x="746" y="146" text-anchor="middle" font-size="9" fill="#047857">P(s'|s, a)</text>
+
+  <!-- World Model output -->
+  <rect x="440" y="168" width="352" height="70" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="616" y="184" text-anchor="middle" font-size="10" fill="#166534">Market index: 94.2 [90.1 – 98.3] in 6 months</text>
+  <text x="616" y="198" text-anchor="middle" font-size="10" fill="#166534">P(recession) = 32% | P(recovery) = 18%</text>
+  <text x="616" y="212" text-anchor="middle" font-size="10" fill="#166534">Tech sector –12.4% | Bonds +3.1% | Vol +8pts</text>
+  <text x="616" y="226" text-anchor="middle" font-size="10" fill="#15803d">Causal path: rates↑ → credit tight → PE compress</text>
+
+  <!-- World Model strength tag -->
+  <rect x="440" y="252" width="352" height="34" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="456" y="268" font-size="10" fill="#15803d">✓ Simulates causal state transitions</text>
+  <text x="456" y="282" font-size="10" fill="#15803d">✓ Generates probabilistic future distributions</text>
+</svg>
