@@ -1,0 +1,511 @@
+/* ─── Simulator Container ───────────────────────────────────────────────────── */
+
+.simulator {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  font-family: var(--ifm-font-family-base);
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────────── */
+
+.header {
+  background: linear-gradient(135deg, #0a1628 0%, #1a4b8c 60%, #0d2d5e 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.headerTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+  color: #fff;
+}
+
+.headerSubtitle {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.88;
+  line-height: 1.5;
+}
+
+.headerSubtitle strong {
+  color: #93c5fd;
+}
+
+/* ─── Scenarios ─────────────────────────────────────────────────────────────── */
+
+.scenarios {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.scenariosLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.6rem;
+}
+
+.scenarioPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.scenarioPill {
+  background: var(--ifm-background-color);
+  border: 1.5px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  color: var(--ifm-font-color-base);
+}
+
+.scenarioPill:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.scenarioPillActive {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.scenarioDesc {
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ─── Controls ──────────────────────────────────────────────────────────────── */
+
+.controls {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.controlsTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.75rem;
+}
+
+.sliderRow {
+  margin-bottom: 0.9rem;
+}
+
+.sliderRow:last-child {
+  margin-bottom: 0;
+}
+
+.sliderLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 0.88rem;
+  color: var(--ifm-font-color-base);
+}
+
+.sliderValue {
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  font-size: 0.92rem;
+  min-width: 52px;
+  text-align: right;
+}
+
+.sliderTrack {
+  position: relative;
+  height: 6px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 3px;
+  margin-bottom: 0.15rem;
+}
+
+.sliderFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--ifm-color-primary);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.sliderInput {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  height: 18px;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.sliderInput::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.sliderMinMax {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* ─── Tabs ──────────────────────────────────────────────────────────────────── */
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+  transition: all 0.18s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab:hover {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.tabActive {
+  color: var(--ifm-color-primary);
+  border-bottom-color: var(--ifm-color-primary);
+  font-weight: 700;
+  background: transparent !important;
+}
+
+/* ─── Content ───────────────────────────────────────────────────────────────── */
+
+.content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* ─── Panels ────────────────────────────────────────────────────────────────── */
+
+.panel {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  min-width: 0;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.panelHeaderTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.panelBadgeWm {
+  background: #0d6b3a;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.panelBadgeLlm {
+  background: #1a4b8c;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Metrics ───────────────────────────────────────────────────────────────── */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.metricCard {
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-color);
+  text-align: center;
+}
+
+.metricLabel {
+  font-size: 0.68rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.metricValue {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.metricUnit {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.metric_positive .metricValue {
+  color: #16a34a;
+}
+
+.metric_negative .metricValue {
+  color: #dc2626;
+}
+
+.metric_neutral .metricValue {
+  color: var(--ifm-color-primary);
+}
+
+/* ─── Chart ─────────────────────────────────────────────────────────────────── */
+
+.chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #0a1628;
+}
+
+/* ─── Insights ──────────────────────────────────────────────────────────────── */
+
+.insights {
+  padding: 0.75rem;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.insightsTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.5rem;
+}
+
+.insightItem {
+  font-size: 0.85rem;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 0.4rem;
+  line-height: 1.45;
+}
+
+.insightItem:last-child {
+  margin-bottom: 0;
+}
+
+.wmNote {
+  padding: 0.5rem 0.75rem;
+  background: #f0fdf4;
+  font-size: 0.76rem;
+  color: #166534;
+  border-top: 1px solid #86efac;
+}
+
+[data-theme='dark'] .wmNote {
+  background: #052e16;
+  color: #4ade80;
+  border-top-color: #166534;
+}
+
+/* ─── LLM Panel ─────────────────────────────────────────────────────────────── */
+
+.llmOutput {
+  padding: 0.75rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.llmPrompt {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid var(--ifm-color-primary);
+  line-height: 1.45;
+}
+
+.llmResponse {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.llmLine {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin: 0 0 0.6rem;
+  color: var(--ifm-font-color-base);
+}
+
+.llmLine:last-child {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.llmLimitations {
+  padding: 0.75rem;
+  background: #fef2f2;
+  border-top: 1px solid #fca5a5;
+}
+
+[data-theme='dark'] .llmLimitations {
+  background: #450a0a;
+  border-top-color: #991b1b;
+}
+
+.limitationsTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b91c1c;
+  margin-bottom: 0.4rem;
+}
+
+[data-theme='dark'] .limitationsTitle {
+  color: #f87171;
+}
+
+.limitationsList {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.limitationsList li {
+  font-size: 0.82rem;
+  color: #991b1b;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+[data-theme='dark'] .limitationsList li {
+  color: #fca5a5;
+}
+
+/* ─── Footer Note ───────────────────────────────────────────────────────────── */
+
+.footerNote {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.45;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .scenarioPills {
+    flex-wrap: wrap;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .headerTitle {
+    font-size: 1.25rem;
+  }
+}

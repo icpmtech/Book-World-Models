@@ -1,0 +1,83 @@
+<svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <!-- Background -->
+  <rect width="780" height="380" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="390" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a4b8c">Causal Chain: Fed Rate Hike → Market Impact</text>
+  <text x="390" y="46" text-anchor="middle" font-size="11" fill="#64748b">A World Model traces causality — an LLM only describes historical correlation</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1a4b8c"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- === Row 1: trigger === -->
+  <rect x="280" y="62" width="220" height="44" rx="8" fill="#1a4b8c" stroke="#1a4b8c" stroke-width="2"/>
+  <text x="390" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Fed Rate Hike  +0.75%</text>
+  <text x="390" y="98" text-anchor="middle" font-size="10" fill="#bfdbfe">Trigger Event (Exogenous Shock)</text>
+
+  <!-- Row1 → Row2 arrow down -->
+  <line x1="390" y1="106" x2="390" y2="126" stroke="#1a4b8c" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- === Row 2: immediate effects (3 boxes) === -->
+  <rect x="30" y="128" width="170" height="44" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="115" y="148" text-anchor="middle" font-size="11" fill="#1e40af">Bond Yields Rise</text>
+  <text x="115" y="162" text-anchor="middle" font-size="9" fill="#3b82f6">+60–80 bps in weeks</text>
+
+  <rect x="305" y="128" width="170" height="44" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="390" y="148" text-anchor="middle" font-size="11" fill="#1e40af">USD Strengthens</text>
+  <text x="390" y="162" text-anchor="middle" font-size="9" fill="#3b82f6">DXY +1.5% – +3% within 30 days</text>
+
+  <rect x="580" y="128" width="170" height="44" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="665" y="148" text-anchor="middle" font-size="11" fill="#1e40af">Credit Costs Rise</text>
+  <text x="665" y="162" text-anchor="middle" font-size="9" fill="#3b82f6">Spreads widen +30–60 bps</text>
+
+  <!-- Fork arrows from Rate Hike to the 3 boxes -->
+  <line x1="390" y1="106" x2="115" y2="128" stroke="#1a4b8c" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="390" y1="106" x2="390" y2="128" stroke="#1a4b8c" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="390" y1="106" x2="665" y2="128" stroke="#1a4b8c" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 2 → Row 3 arrows -->
+  <line x1="115" y1="172" x2="115" y2="212" stroke="#d97706" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="390" y1="172" x2="390" y2="212" stroke="#d97706" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="665" y1="172" x2="665" y2="212" stroke="#d97706" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- === Row 3: secondary effects === -->
+  <rect x="30" y="214" width="170" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="115" y="234" text-anchor="middle" font-size="11" fill="#92400e">P/E Compression</text>
+  <text x="115" y="248" text-anchor="middle" font-size="9" fill="#b45309">DCF discount rate rises</text>
+
+  <rect x="305" y="214" width="170" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="390" y="234" text-anchor="middle" font-size="11" fill="#92400e">EM Outflows</text>
+  <text x="390" y="248" text-anchor="middle" font-size="9" fill="#b45309">Capital flees to USD assets</text>
+
+  <rect x="580" y="214" width="170" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="665" y="234" text-anchor="middle" font-size="11" fill="#92400e">Corporate Capex Falls</text>
+  <text x="665" y="248" text-anchor="middle" font-size="9" fill="#b45309">ROI hurdle rises</text>
+
+  <!-- Row 3 → Row 4 arrows -->
+  <line x1="115" y1="258" x2="200" y2="298" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="390" y1="258" x2="390" y2="298" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="665" y1="258" x2="580" y2="298" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- === Row 4: terminal outcome === -->
+  <rect x="175" y="300" width="430" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="390" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Equity Market Decline  –8% to –18% over 6–12 months</text>
+  <text x="390" y="336" text-anchor="middle" font-size="10" fill="#b91c1c">Growth sectors –15%, Financials –10%, Emerging Markets –20%</text>
+
+  <!-- LLM label on the left -->
+  <rect x="4" y="355" width="370" height="22" rx="4" fill="#fef2f2"/>
+  <text x="12" y="370" font-size="9.5" fill="#dc2626">⚠ LLM output: "Rate hikes may cause market volatility and are historically bearish for equities."</text>
+
+  <!-- WM label on the right -->
+  <rect x="400" y="355" width="376" height="22" rx="4" fill="#f0fdf4"/>
+  <text x="408" y="370" font-size="9.5" fill="#166534">✓ World Model output: quantified, causal, time-stamped probability distributions</text>
+</svg>
