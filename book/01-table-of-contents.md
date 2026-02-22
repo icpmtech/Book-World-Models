@@ -12,4 +12,5 @@
 10. [Risk, Ethics, and Market Reflexivity](11-chapter-10.md)
 11. [Toward Financial AGI](12-chapter-11.md)
 12. [The Future of Intelligent Capital Allocation](13-chapter-12.md)
-13. [References](14-references.md)
+13. [World Models in Finance: Improving Investment Returns and Decision Making in Stock Markets](15-chapter-13.md)
+14. [References](14-references.md)

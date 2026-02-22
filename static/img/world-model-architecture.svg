@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="500" fill="#f8f9fc" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">World Model: Core Architecture &amp; Future Extensions</text>
+
+  <!-- State Input -->
+  <rect x="30" y="70" width="160" height="110" rx="8" fill="#fff" stroke="#3498db" stroke-width="2"/>
+  <rect x="30" y="70" width="160" height="32" rx="8" fill="#3498db"/>
+  <text x="110" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Financial State s_t</text>
+  <text x="45" y="125" font-size="11" fill="#555">• Prices &amp; returns</text>
+  <text x="45" y="142" font-size="11" fill="#555">• Macro indicators</text>
+  <text x="45" y="159" font-size="11" fill="#555">• Sentiment index</text>
+
+  <!-- Arrow: State → Encoder -->
+  <line x1="190" y1="125" x2="230" y2="125" stroke="#3498db" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Encoder / Vision Model -->
+  <rect x="230" y="70" width="130" height="110" rx="8" fill="#fff" stroke="#9b59b6" stroke-width="2"/>
+  <rect x="230" y="70" width="130" height="32" rx="8" fill="#9b59b6"/>
+  <text x="295" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Encoder (V)</text>
+  <text x="245" y="125" font-size="11" fill="#555">Compresses high-</text>
+  <text x="245" y="140" font-size="11" fill="#555">dim inputs into</text>
+  <text x="245" y="155" font-size="11" fill="#555">latent space z_t</text>
+
+  <!-- Arrow: Encoder → Memory -->
+  <line x1="360" y1="125" x2="400" y2="125" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <!-- Memory Model -->
+  <rect x="400" y="70" width="130" height="110" rx="8" fill="#fff" stroke="#e67e22" stroke-width="2"/>
+  <rect x="400" y="70" width="130" height="32" rx="8" fill="#e67e22"/>
+  <text x="465" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Memory (M)</text>
+  <text x="415" y="125" font-size="11" fill="#555">Latent dynamics</text>
+  <text x="415" y="140" font-size="11" fill="#555">z_t → z_{t+1}</text>
+  <text x="415" y="155" font-size="11" fill="#555">RSSM / Mamba</text>
+
+  <!-- Arrow: Memory → Controller -->
+  <line x1="530" y1="125" x2="570" y2="125" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow-orange)"/>
+
+  <!-- Controller -->
+  <rect x="570" y="70" width="130" height="110" rx="8" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+  <rect x="570" y="70" width="130" height="32" rx="8" fill="#27ae60"/>
+  <text x="635" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Controller (C)</text>
+  <text x="585" y="125" font-size="11" fill="#555">Selects optimal</text>
+  <text x="585" y="140" font-size="11" fill="#555">portfolio action</text>
+  <text x="585" y="155" font-size="11" fill="#555">via policy π(z_t)</text>
+
+  <!-- Arrow: Controller → Output -->
+  <line x1="700" y1="125" x2="740" y2="125" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- Output -->
+  <rect x="740" y="70" width="60" height="110" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="770" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">Action</text>
+  <text x="770" y="116" text-anchor="middle" font-size="10" fill="#555">Alloc.</text>
+  <text x="770" y="131" text-anchor="middle" font-size="10" fill="#555">Hedge</text>
+  <text x="770" y="146" text-anchor="middle" font-size="10" fill="#555">Rotate</text>
+  <text x="770" y="161" text-anchor="middle" font-size="10" fill="#555">Exit</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="205" x2="790" y2="205" stroke="#ddd" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="410" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">Future Architecture Extensions</text>
+
+  <!-- Future 1: Transformer-based World Models -->
+  <rect x="30" y="240" width="170" height="100" rx="8" fill="#fff" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="30" y="240" width="170" height="30" rx="8" fill="#8e44ad"/>
+  <text x="115" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Transformer World Models</text>
+  <text x="45" y="285" font-size="10" fill="#555">• Attention over long time</text>
+  <text x="45" y="300" font-size="10" fill="#555">• Global macro context</text>
+  <text x="45" y="315" font-size="10" fill="#555">• GAIA / UniSim paradigm</text>
+
+  <!-- Future 2: Hierarchical WM -->
+  <rect x="220" y="240" width="170" height="100" rx="8" fill="#fff" stroke="#2980b9" stroke-width="2"/>
+  <rect x="220" y="240" width="170" height="30" rx="8" fill="#2980b9"/>
+  <text x="305" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Hierarchical World Models</text>
+  <text x="235" y="285" font-size="10" fill="#555">• Multi-scale time horizons</text>
+  <text x="235" y="300" font-size="10" fill="#555">• Intraday + macro levels</text>
+  <text x="235" y="315" font-size="10" fill="#555">• Goal-conditioned planning</text>
+
+  <!-- Future 3: Diffusion-based WM -->
+  <rect x="410" y="240" width="170" height="100" rx="8" fill="#fff" stroke="#16a085" stroke-width="2"/>
+  <rect x="410" y="240" width="170" height="30" rx="8" fill="#16a085"/>
+  <text x="495" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Diffusion World Models</text>
+  <text x="425" y="285" font-size="10" fill="#555">• Generative scenario paths</text>
+  <text x="425" y="300" font-size="10" fill="#555">• Richer tail distribution</text>
+  <text x="425" y="315" font-size="10" fill="#555">• Used in SORA-like models</text>
+
+  <!-- Future 4: Multi-Agent WM -->
+  <rect x="600" y="240" width="180" height="100" rx="8" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <rect x="600" y="240" width="180" height="30" rx="8" fill="#e74c3c"/>
+  <text x="690" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Multi-Agent World Models</text>
+  <text x="615" y="285" font-size="10" fill="#555">• Simulates other market</text>
+  <text x="615" y="300" font-size="10" fill="#555">  participants' strategies</text>
+  <text x="615" y="315" font-size="10" fill="#555">• Game-theoretic planning</text>
+
+  <!-- Bottom caption -->
+  <rect x="30" y="360" width="760" height="60" rx="8" fill="#fff9e6" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="410" y="382" text-anchor="middle" font-size="12" font-weight="bold" fill="#d68910">Key Insight</text>
+  <text x="410" y="402" text-anchor="middle" font-size="11" fill="#555">The V-M-C architecture can be upgraded with any of the above future extensions while keeping</text>
+  <text x="410" y="418" text-anchor="middle" font-size="11" fill="#555">the same input/output interface — enabling ongoing improvement without system redesign.</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9b59b6"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+</svg>

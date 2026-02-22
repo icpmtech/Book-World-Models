@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" width="820" height="460" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="460" fill="#f8f9fc" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">World Model Return Enhancement vs. Traditional Strategies</text>
+
+  <!-- Y axis -->
+  <line x1="80" y1="55" x2="80" y2="360" stroke="#555" stroke-width="1.5"/>
+  <text x="75" y="370" text-anchor="end" font-size="10" fill="#555">0%</text>
+  <text x="75" y="320" text-anchor="end" font-size="10" fill="#555">5%</text>
+  <text x="75" y="270" text-anchor="end" font-size="10" fill="#555">10%</text>
+  <text x="75" y="220" text-anchor="end" font-size="10" fill="#555">15%</text>
+  <text x="75" y="170" text-anchor="end" font-size="10" fill="#555">20%</text>
+  <text x="75" y="120" text-anchor="end" font-size="10" fill="#555">25%</text>
+  <text x="75" y="70" text-anchor="end" font-size="10" fill="#555">30%</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="360" x2="790" y2="360" stroke="#ddd" stroke-width="1"/>
+  <line x1="80" y1="310" x2="790" y2="310" stroke="#eee" stroke-width="1"/>
+  <line x1="80" y1="260" x2="790" y2="260" stroke="#eee" stroke-width="1"/>
+  <line x1="80" y1="210" x2="790" y2="210" stroke="#eee" stroke-width="1"/>
+  <line x1="80" y1="160" x2="790" y2="160" stroke="#eee" stroke-width="1"/>
+  <line x1="80" y1="110" x2="790" y2="110" stroke="#eee" stroke-width="1"/>
+  <line x1="80" y1="60" x2="790" y2="60" stroke="#eee" stroke-width="1"/>
+
+  <!-- X axis -->
+  <line x1="80" y1="360" x2="790" y2="360" stroke="#555" stroke-width="1.5"/>
+
+  <!-- === Buy & Hold === -->
+  <text x="147" y="380" text-anchor="middle" font-size="10" fill="#555">Buy &amp; Hold</text>
+  <!-- Bar: ~8% return → (8/30)*300 = 80px from bottom -->
+  <rect x="105" y="280" width="84" height="80" fill="#95a5a6" rx="3"/>
+  <text x="147" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">8%</text>
+
+  <!-- === Traditional Backtesting === -->
+  <text x="280" y="380" text-anchor="middle" font-size="10" fill="#555">Traditional</text>
+  <text x="280" y="392" text-anchor="middle" font-size="10" fill="#555">Backtesting</text>
+  <!-- Bar: ~11% return → 110px -->
+  <rect x="240" y="250" width="84" height="110" fill="#3498db" rx="3"/>
+  <text x="282" y="244" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">11%</text>
+
+  <!-- === LLM-Augmented === -->
+  <text x="415" y="380" text-anchor="middle" font-size="10" fill="#555">LLM-Augmented</text>
+  <text x="415" y="392" text-anchor="middle" font-size="10" fill="#555">Strategy</text>
+  <!-- Bar: ~14% return → 140px -->
+  <rect x="373" y="220" width="84" height="140" fill="#9b59b6" rx="3"/>
+  <text x="415" y="214" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">14%</text>
+
+  <!-- === RL Agent (no WM) === -->
+  <text x="549" y="380" text-anchor="middle" font-size="10" fill="#555">RL Agent</text>
+  <text x="549" y="392" text-anchor="middle" font-size="10" fill="#555">(no World Model)</text>
+  <!-- Bar: ~18% return → 180px -->
+  <rect x="507" y="180" width="84" height="180" fill="#e67e22" rx="3"/>
+  <text x="549" y="174" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">18%</text>
+
+  <!-- === World Model Agent === -->
+  <text x="686" y="380" text-anchor="middle" font-size="10" fill="#555">World Model</text>
+  <text x="686" y="392" text-anchor="middle" font-size="10" fill="#555">Agent</text>
+  <!-- Bar: ~26% return → 260px -->
+  <rect x="644" y="100" width="84" height="260" fill="#27ae60" rx="3"/>
+  <text x="686" y="93" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">26%</text>
+  <!-- Star indicator -->
+  <text x="750" y="105" font-size="18" fill="#f1c40f">★</text>
+
+  <!-- Y-axis label -->
+  <text transform="rotate(-90)" x="-200" y="25" text-anchor="middle" font-size="12" fill="#555">Annual Return (simulated, illustrative)</text>
+
+  <!-- Legend -->
+  <rect x="80" y="410" width="660" height="40" rx="8" fill="#fff9e6" stroke="#f39c12" stroke-width="1"/>
+  <text x="410" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#784212">★ World Model agent achieved best risk-adjusted return by simulating 10,000+ forward paths before each allocation decision</text>
+  <text x="410" y="444" text-anchor="middle" font-size="10" fill="#888">Illustrative simulation results — not actual investment advice. Real performance depends on model quality, data, and market conditions.</text>
+</svg>
