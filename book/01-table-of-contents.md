@@ -12,3 +12,4 @@
 10. [Risk, Ethics, and Market Reflexivity](11-chapter-10.md)
 11. [Toward Financial AGI](12-chapter-11.md)
 12. [The Future of Intelligent Capital Allocation](13-chapter-12.md)
+13. [References](14-references.md)
