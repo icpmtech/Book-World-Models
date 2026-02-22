@@ -1,0 +1,43 @@
+/**
+ * Custom CSS for Financial World Models book site.
+ * Uses a professional dark-blue financial color palette.
+ */
+
+:root {
+  --ifm-color-primary: #1a4b8c;
+  --ifm-color-primary-dark: #17427d;
+  --ifm-color-primary-darker: #163e76;
+  --ifm-color-primary-darkest: #113261;
+  --ifm-color-primary-light: #1d549b;
+  --ifm-color-primary-lighter: #1e58a2;
+  --ifm-color-primary-lightest: #2264b8;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: Georgia, 'Times New Roman', serif;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4d90e8;
+  --ifm-color-primary-dark: #2f7fe4;
+  --ifm-color-primary-darker: #2177e2;
+  --ifm-color-primary-darkest: #1560c1;
+  --ifm-color-primary-light: #6ba1ec;
+  --ifm-color-primary-lighter: #79a9ee;
+  --ifm-color-primary-lightest: #a3c3f4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.hero--primary {
+  background: linear-gradient(135deg, #0a1628 0%, #1a4b8c 60%, #0d2d5e 100%);
+}
+
+.hero__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.8rem;
+}
+
+.hero__subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
