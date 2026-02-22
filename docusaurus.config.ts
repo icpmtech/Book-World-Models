@@ -70,6 +70,11 @@ const config: Config = {
           label: '🌍 Simulator',
         },
         {
+          to: '/market-pro',
+          position: 'right',
+          label: '📈 Market Pro',
+        },
+        {
           href: 'https://github.com/icpmtech/Book-World-Models',
           label: 'GitHub',
           position: 'right',
@@ -102,6 +107,10 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/icpmtech/Book-World-Models',
+            },
+            {
+              label: 'Market Pro Digital',
+              href: 'https://market-pro.digital',
             },
           ],
         },
