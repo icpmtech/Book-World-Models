@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="480" fill="#f8f9fc" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">10,000 Simulated Portfolio Futures — Fan Chart</text>
+
+  <!-- Chart area background -->
+  <rect x="80" y="50" width="710" height="330" fill="#fff" stroke="#e0e0e0" stroke-width="1" rx="4"/>
+
+  <!-- Grid lines (horizontal) -->
+  <line x1="80" y1="116" x2="790" y2="116" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="80" y1="182" x2="790" y2="182" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="80" y1="248" x2="790" y2="248" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="80" y1="314" x2="790" y2="314" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Y-axis labels (portfolio value index, base=100) -->
+  <text x="74" y="54" text-anchor="end" font-size="10" fill="#888">160</text>
+  <text x="74" y="120" text-anchor="end" font-size="10" fill="#888">140</text>
+  <text x="74" y="186" text-anchor="end" font-size="10" fill="#888">120</text>
+  <text x="74" y="252" text-anchor="end" font-size="10" fill="#888">100</text>
+  <text x="74" y="318" text-anchor="end" font-size="10" fill="#888">80</text>
+  <text x="74" y="384" text-anchor="end" font-size="10" fill="#888">60</text>
+
+  <!-- Y-axis label -->
+  <text x="18" y="215" text-anchor="middle" font-size="11" fill="#555" transform="rotate(-90, 18, 215)">Portfolio Value (Base = 100)</text>
+
+  <!-- X-axis labels -->
+  <text x="115" y="400" text-anchor="middle" font-size="10" fill="#888">−12m</text>
+  <text x="200" y="400" text-anchor="middle" font-size="10" fill="#888">−9m</text>
+  <text x="285" y="400" text-anchor="middle" font-size="10" fill="#888">−6m</text>
+  <text x="370" y="400" text-anchor="middle" font-size="10" fill="#888">−3m</text>
+  <text x="456" y="400" text-anchor="middle" font-size="10" fill="#555" font-weight="bold">Now</text>
+  <text x="542" y="400" text-anchor="middle" font-size="10" fill="#888">+6m</text>
+  <text x="627" y="400" text-anchor="middle" font-size="10" fill="#888">+12m</text>
+  <text x="713" y="400" text-anchor="middle" font-size="10" fill="#888">+18m</text>
+  <text x="790" y="400" text-anchor="middle" font-size="10" fill="#888">+24m</text>
+
+  <!-- "Now" vertical divider -->
+  <line x1="456" y1="50" x2="456" y2="380" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="462" y="65" font-size="10" fill="#e74c3c" font-weight="bold">NOW</text>
+
+  <!-- ====== FUTURE BANDS (drawn before lines) ====== -->
+
+  <!-- Band: 5th–95th percentile (lightest) -->
+  <polygon points="
+    456,248
+    542,230  627,200  713,165  790,135
+    790,328  713,318  627,302  542,278  456,248"
+    fill="#aed6f1" opacity="0.45"/>
+
+  <!-- Band: 25th–75th percentile (medium) -->
+  <polygon points="
+    456,248
+    542,238  627,222  713,200  790,182
+    790,290  713,282  627,270  542,260  456,248"
+    fill="#2980b9" opacity="0.30"/>
+
+  <!-- ====== HISTORICAL LINE ====== -->
+  <polyline points="115,248  200,236  285,245  370,226  456,219"
+    fill="none" stroke="#1a1a2e" stroke-width="2.5"/>
+  <!-- Historical dots -->
+  <circle cx="115" cy="248" r="3.5" fill="#1a1a2e"/>
+  <circle cx="200" cy="236" r="3.5" fill="#1a1a2e"/>
+  <circle cx="285" cy="245" r="3.5" fill="#1a1a2e"/>
+  <circle cx="370" cy="226" r="3.5" fill="#1a1a2e"/>
+  <circle cx="456" cy="219" r="5" fill="#e74c3c" stroke="#fff" stroke-width="1.5"/>
+
+  <!-- ====== MEDIAN (future) LINE ====== -->
+  <polyline points="456,219  542,210  627,198  713,185  790,175"
+    fill="none" stroke="#1a6699" stroke-width="2.5" stroke-dasharray="8,3"/>
+
+  <!-- ====== SAMPLE INDIVIDUAL PATHS (light, for texture) ====== -->
+  <!-- A few sample paths to show the idea of many simulations -->
+  <polyline points="456,219  542,205  627,180  713,155  790,128" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.5"/>
+  <polyline points="456,219  542,215  627,195  713,168  790,148" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.5"/>
+  <polyline points="456,219  542,222  627,208  713,192  790,175" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,220  627,215  713,208  790,195" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,232  627,240  713,245  790,250" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,238  627,248  713,260  790,272" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,242  627,258  713,272  790,290" fill="none" stroke="#e74c3c" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,228  627,225  713,220  790,218" fill="none" stroke="#2980b9" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,200  627,185  713,158  790,120" fill="none" stroke="#27ae60" stroke-width="0.7" opacity="0.4"/>
+  <polyline points="456,219  542,250  627,268  713,295  790,318" fill="none" stroke="#e74c3c" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- Legend box -->
+  <rect x="495" y="55" width="285" height="90" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="510" y="72" font-size="10.5" font-weight="bold" fill="#333">Legend</text>
+  <!-- Historical -->
+  <line x1="510" y1="84" x2="540" y2="84" stroke="#1a1a2e" stroke-width="2.5"/>
+  <circle cx="525" cy="84" r="3" fill="#1a1a2e"/>
+  <text x="546" y="88" font-size="10" fill="#555">Historical portfolio value</text>
+  <!-- Median -->
+  <line x1="510" y1="100" x2="540" y2="100" stroke="#1a6699" stroke-width="2.5" stroke-dasharray="7,3"/>
+  <text x="546" y="104" font-size="10" fill="#555">Median simulated path</text>
+  <!-- 25-75 band -->
+  <rect x="510" y="111" width="30" height="10" fill="#2980b9" opacity="0.45"/>
+  <text x="546" y="121" font-size="10" fill="#555">25th–75th percentile</text>
+  <!-- 5-95 band -->
+  <rect x="510" y="127" width="30" height="10" fill="#aed6f1" opacity="0.7"/>
+  <text x="546" y="137" font-size="10" fill="#555">5th–95th percentile</text>
+
+  <!-- Annotations -->
+  <!-- 95th percentile label -->
+  <text x="795" y="132" font-size="10" fill="#1a6699" font-weight="bold">95th %ile</text>
+  <text x="795" y="178" font-size="10" fill="#1a6699" font-weight="bold">75th %ile</text>
+  <text x="795" y="172" font-size="10" fill="#1a6699">──</text>
+  <text x="795" y="210" font-size="10" fill="#1a6699" font-weight="bold">Median</text>
+  <text x="795" y="255" font-size="10" fill="#e74c3c" font-weight="bold">25th %ile</text>
+  <text x="795" y="328" font-size="10" fill="#e74c3c" font-weight="bold">5th %ile</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="415" width="710" height="48" rx="6" fill="#fff9e6" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="410" y="433" text-anchor="middle" font-size="11" font-weight="bold" fill="#d68910">Key Insight</text>
+  <text x="410" y="450" text-anchor="middle" font-size="10.5" fill="#555">Unlike backtesting, which produces one path, simulation produces the full distribution of outcomes —</text>
+  <text x="410" y="464" text-anchor="middle" font-size="10.5" fill="#555">enabling risk management by tail percentile, not just historical average performance.</text>
+</svg>
