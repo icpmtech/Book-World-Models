@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" width="820" height="580" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="580" fill="#f8f9fc" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">Portfolio Simulation Engine Architecture</text>
+
+  <!-- === Row 1: Inputs === -->
+  <rect x="100" y="55" width="200" height="65" rx="8" fill="#fff" stroke="#3498db" stroke-width="2"/>
+  <rect x="100" y="55" width="200" height="28" rx="8" fill="#3498db"/>
+  <text x="200" y="74" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Portfolio State</text>
+  <text x="115" y="100" font-size="10" fill="#555">• Asset weights &amp; positions</text>
+  <text x="115" y="114" font-size="10" fill="#555">• Current P&amp;L &amp; exposures</text>
+
+  <rect x="520" y="55" width="200" height="65" rx="8" fill="#fff" stroke="#3498db" stroke-width="2"/>
+  <rect x="520" y="55" width="200" height="28" rx="8" fill="#3498db"/>
+  <text x="620" y="74" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Market Data</text>
+  <text x="535" y="100" font-size="10" fill="#555">• Prices, yields, vol surfaces</text>
+  <text x="535" y="114" font-size="10" fill="#555">• Macro indicators &amp; sentiment</text>
+
+  <!-- Arrows from Row 1 to Row 2 -->
+  <line x1="200" y1="120" x2="200" y2="155" stroke="#3498db" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="620" y1="120" x2="620" y2="155" stroke="#3498db" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- Horizontal connector -->
+  <line x1="200" y1="137" x2="620" y2="137" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- === Row 2: World Model Encoder === -->
+  <rect x="260" y="155" width="300" height="65" rx="8" fill="#fff" stroke="#9b59b6" stroke-width="2"/>
+  <rect x="260" y="155" width="300" height="28" rx="8" fill="#9b59b6"/>
+  <text x="410" y="174" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">World Model Encoder</text>
+  <text x="275" y="200" font-size="10" fill="#555">Compresses market state into latent representation</text>
+  <text x="275" y="214" font-size="10" fill="#555">z_t ∈ ℝⁿ  |  Regime inference  |  Uncertainty estimation</text>
+
+  <!-- Arrow Row 2 → Row 3 -->
+  <line x1="410" y1="220" x2="410" y2="255" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <!-- === Row 3: Monte Carlo Engine === -->
+  <rect x="200" y="255" width="420" height="65" rx="8" fill="#fff" stroke="#e67e22" stroke-width="2.5"/>
+  <rect x="200" y="255" width="420" height="28" rx="8" fill="#e67e22"/>
+  <text x="410" y="274" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Monte Carlo Simulation Engine  ×10,000 paths</text>
+  <text x="215" y="300" font-size="10" fill="#555">Rolls latent state forward  |  Regime-conditioned dynamics  |  Fat-tail sampling</text>
+  <text x="215" y="314" font-size="10" fill="#555">Generates full distribution of future portfolio trajectories across all market scenarios</text>
+
+  <!-- Five downward arrows to metrics -->
+  <line x1="170" y1="320" x2="130" y2="355" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="286" y1="320" x2="286" y2="355" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="410" y1="320" x2="410" y2="355" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="534" y1="320" x2="534" y2="355" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="650" y1="320" x2="690" y2="355" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+  <!-- === Row 4: Five Metric Boxes === -->
+  <!-- Drawdown -->
+  <rect x="30" y="355" width="130" height="68" rx="7" fill="#fef9f0" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="30" y="355" width="130" height="22" rx="7" fill="#e67e22"/>
+  <text x="95" y="371" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Max Drawdown</text>
+  <text x="40" y="392" font-size="9.5" fill="#555">Worst peak-to-trough</text>
+  <text x="40" y="405" font-size="9.5" fill="#555">across all 10k paths</text>
+  <text x="40" y="418" font-size="9.5" fill="#e74c3c">P(DD &gt; 20%) = 12%</text>
+
+  <!-- Recovery Time -->
+  <rect x="222" y="355" width="130" height="68" rx="7" fill="#fef9f0" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="222" y="355" width="130" height="22" rx="7" fill="#e67e22"/>
+  <text x="287" y="371" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Recovery Time</text>
+  <text x="232" y="392" font-size="9.5" fill="#555">Months to recover</text>
+  <text x="232" y="405" font-size="9.5" fill="#555">from drawdown trough</text>
+  <text x="232" y="418" font-size="9.5" fill="#e67e22">Median: 9.2 months</text>
+
+  <!-- Dividend Sustainability -->
+  <rect x="346" y="355" width="130" height="68" rx="7" fill="#fef9f0" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="346" y="355" width="130" height="22" rx="7" fill="#e67e22"/>
+  <text x="411" y="371" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Dividend Sustain.</text>
+  <text x="356" y="392" font-size="9.5" fill="#555">Probability dividend</text>
+  <text x="356" y="405" font-size="9.5" fill="#555">is maintained / grown</text>
+  <text x="356" y="418" font-size="9.5" fill="#27ae60">P(sustained) = 78%</text>
+
+  <!-- Bankruptcy Probability -->
+  <rect x="470" y="355" width="130" height="68" rx="7" fill="#fef9f0" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="470" y="355" width="130" height="22" rx="7" fill="#e67e22"/>
+  <text x="535" y="371" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Bankruptcy Risk</text>
+  <text x="480" y="392" font-size="9.5" fill="#555">Probability any holding</text>
+  <text x="480" y="405" font-size="9.5" fill="#555">reaches insolvency</text>
+  <text x="480" y="418" font-size="9.5" fill="#e74c3c">P(default) = 3.1%</text>
+
+  <!-- Volatility Clustering -->
+  <rect x="660" y="355" width="130" height="68" rx="7" fill="#fef9f0" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="660" y="355" width="130" height="22" rx="7" fill="#e67e22"/>
+  <text x="725" y="371" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Volatility Clustering</text>
+  <text x="670" y="392" font-size="9.5" fill="#555">Persistence of high-vol</text>
+  <text x="670" y="405" font-size="9.5" fill="#555">regimes across paths</text>
+  <text x="670" y="418" font-size="9.5" fill="#e67e22">GARCH(1,1) fitted</text>
+
+  <!-- Arrows from metrics to aggregator -->
+  <line x1="95" y1="423" x2="350" y2="465" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="287" y1="423" x2="370" y2="465" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="411" y1="423" x2="411" y2="465" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="535" y1="423" x2="452" y2="465" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="725" y1="423" x2="470" y2="465" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- === Row 5: Risk Aggregator === -->
+  <rect x="260" y="465" width="300" height="40" rx="8" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+  <rect x="260" y="465" width="300" height="40" rx="8" fill="#eafaf1"/>
+  <text x="410" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">Risk Aggregator</text>
+  <text x="410" y="496" text-anchor="middle" font-size="10" fill="#555">Probability-weighted composite resilience score</text>
+
+  <!-- Arrow to Portfolio Optimizer -->
+  <line x1="410" y1="505" x2="410" y2="530" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- === Row 6: Output === -->
+  <rect x="240" y="530" width="340" height="35" rx="8" fill="#1e8449"/>
+  <text x="410" y="552" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Resilience-Optimized Portfolio</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9b59b6"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+</svg>
