@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="520" height="520" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="260" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">Market Regime Cycle</text>
+
+  <!-- Center circle (subtle) -->
+  <circle cx="260" cy="270" r="88" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- ── EXPANSION (top) ── -->
+  <rect x="175" y="68" width="170" height="68" rx="10" fill="#2ecc71" opacity="0.92"/>
+  <text x="260" y="97" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Expansion</text>
+  <text x="260" y="116" text-anchor="middle" font-size="11" fill="#e8f8f0">GDP ↑ · Earnings ↑ · Vol Low</text>
+
+  <!-- ── OVERHEATING (right) ── -->
+  <rect x="347" y="215" width="148" height="68" rx="10" fill="#e67e22" opacity="0.92"/>
+  <text x="421" y="244" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Overheating</text>
+  <text x="421" y="263" text-anchor="middle" font-size="11" fill="#fef5ec">Inflation ↑ · Rates ↑ · Peak</text>
+
+  <!-- ── CONTRACTION (bottom) ── -->
+  <rect x="175" y="362" width="170" height="68" rx="10" fill="#e74c3c" opacity="0.92"/>
+  <text x="260" y="391" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Contraction</text>
+  <text x="260" y="410" text-anchor="middle" font-size="11" fill="#fdf2f2">GDP ↓ · Vol ↑ · Bearish</text>
+
+  <!-- ── RECOVERY (left) ── -->
+  <rect x="24" y="215" width="148" height="68" rx="10" fill="#3498db" opacity="0.92"/>
+  <text x="98" y="244" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Recovery</text>
+  <text x="98" y="263" text-anchor="middle" font-size="11" fill="#eaf4fb">Rates ↓ · Sentiment ↑ · Trough</text>
+
+  <!-- ── Arrows (clockwise) ── -->
+  <!-- Expansion → Overheating (top-right arc) -->
+  <path d="M 345 102 Q 430 130 405 215" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Overheating → Contraction (right-bottom arc) -->
+  <path d="M 415 283 Q 440 350 390 362" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Contraction → Recovery (bottom-left arc) -->
+  <path d="M 175 396 Q 100 390 120 283" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Recovery → Expansion (left-top arc) -->
+  <path d="M 104 215 Q 100 130 175 102" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Central label -->
+  <text x="260" y="263" text-anchor="middle" font-size="12" fill="#888">Latent</text>
+  <text x="260" y="279" text-anchor="middle" font-size="12" fill="#888">Regime</text>
+  <text x="260" y="295" text-anchor="middle" font-size="12" fill="#888">Variable</text>
+
+  <!-- Legend -->
+  <rect x="30" y="460" width="14" height="14" rx="3" fill="#2ecc71"/>
+  <text x="50" y="472" font-size="11" fill="#444">Growth phase</text>
+  <rect x="130" y="460" width="14" height="14" rx="3" fill="#e67e22"/>
+  <text x="150" y="472" font-size="11" fill="#444">Peak / stress</text>
+  <rect x="240" y="460" width="14" height="14" rx="3" fill="#e74c3c"/>
+  <text x="260" y="472" font-size="11" fill="#444">Downturn</text>
+  <rect x="330" y="460" width="14" height="14" rx="3" fill="#3498db"/>
+  <text x="350" y="472" font-size="11" fill="#444">Stabilisation</text>
+</svg>
