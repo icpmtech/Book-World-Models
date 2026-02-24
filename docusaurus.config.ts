@@ -70,6 +70,11 @@ const config: Config = {
           label: '🌍 Simulator',
         },
         {
+          to: '/portfolio-simulation',
+          position: 'left',
+          label: '📊 Portfolio Engine',
+        },
+        {
           to: '/market-pro',
           position: 'right',
           label: '📈 Market Pro',
