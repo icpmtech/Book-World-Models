@@ -70,9 +70,9 @@ const config: Config = {
           label: '🌍 Simulator',
         },
         {
-          to: '/regime-simulator',
+          to: '/portfolio-simulation',
           position: 'left',
-          label: '🔍 Regime Simulator',
+          label: '📊 Portfolio Engine',
         },
         {
           to: '/market-pro',
