@@ -29,6 +29,11 @@ function HomepageHeader() {
             to="/docs/chapter-01">
             Chapter 1 →
           </Link>
+          <Link
+            className="button button--outline button--secondary button--lg"
+            to="/book-pdf">
+            📄 Download PDF
+          </Link>
         </div>
       </div>
     </header>
