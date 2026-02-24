@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="720" height="320" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">Recurrent State Space Model (RSSM) — World Model Architecture</text>
+
+  <!-- ─── Time step labels ─── -->
+  <text x="120" y="58" text-anchor="middle" font-size="11" fill="#888">t−1</text>
+  <text x="360" y="58" text-anchor="middle" font-size="11" fill="#888">t</text>
+  <text x="600" y="58" text-anchor="middle" font-size="11" fill="#888">t+1</text>
+
+  <!-- ─── Recurrent state h boxes ─── -->
+  <!-- h_{t-1} -->
+  <rect x="60" y="65" width="120" height="42" rx="8" fill="#8e44ad" opacity="0.82"/>
+  <text x="120" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">h_{t−1}</text>
+  <text x="120" y="98" text-anchor="middle" font-size="10" fill="#eee">Recurrent State</text>
+
+  <!-- h_t -->
+  <rect x="300" y="65" width="120" height="42" rx="8" fill="#8e44ad" opacity="0.82"/>
+  <text x="360" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">h_t</text>
+  <text x="360" y="98" text-anchor="middle" font-size="10" fill="#eee">Recurrent State</text>
+
+  <!-- h_{t+1} -->
+  <rect x="540" y="65" width="120" height="42" rx="8" fill="#8e44ad" opacity="0.82"/>
+  <text x="600" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">h_{t+1}</text>
+  <text x="600" y="98" text-anchor="middle" font-size="10" fill="#eee">Recurrent State</text>
+
+  <!-- Arrows: h_{t-1} → h_t → h_{t+1} -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8e44ad"/>
+    </marker>
+    <marker id="arrblue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2980b9"/>
+    </marker>
+    <marker id="arrgray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+    <marker id="arrgreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="86" x2="298" y2="86" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="420" y1="86" x2="538" y2="86" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Dotted continuation -->
+  <line x1="660" y1="86" x2="700" y2="86" stroke="#8e44ad" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- ─── Latent z boxes ─── -->
+  <!-- z_{t-1} -->
+  <ellipse cx="120" cy="175" rx="50" ry="30" fill="#f39c12" opacity="0.88"/>
+  <text x="120" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">z_{t−1}</text>
+  <text x="120" y="188" text-anchor="middle" font-size="10" fill="#fff">Latent</text>
+
+  <!-- z_t -->
+  <ellipse cx="360" cy="175" rx="50" ry="30" fill="#f39c12" opacity="0.88"/>
+  <text x="360" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">z_t</text>
+  <text x="360" y="188" text-anchor="middle" font-size="10" fill="#fff">Latent</text>
+
+  <!-- z_{t+1} -->
+  <ellipse cx="600" cy="175" rx="50" ry="30" fill="#f39c12" opacity="0.88"/>
+  <text x="600" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">z_{t+1}</text>
+  <text x="600" y="188" text-anchor="middle" font-size="10" fill="#fff">Latent</text>
+
+  <!-- Arrows: h → z (dynamics) -->
+  <line x1="120" y1="107" x2="120" y2="143" stroke="#555" stroke-width="1.8" marker-end="url(#arrgray)"/>
+  <line x1="360" y1="107" x2="360" y2="143" stroke="#555" stroke-width="1.8" marker-end="url(#arrgray)"/>
+  <line x1="600" y1="107" x2="600" y2="143" stroke="#555" stroke-width="1.8" marker-end="url(#arrgray)"/>
+
+  <!-- Arrows: z_{t-1} → h_t (transition) and z_t → h_{t+1} -->
+  <path d="M 165 165 Q 230 120 298 86" fill="none" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <path d="M 405 165 Q 470 120 538 86" fill="none" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- ─── Observations o boxes ─── -->
+  <!-- o_{t-1} -->
+  <rect x="60" y="240" width="120" height="40" rx="8" fill="#27ae60" opacity="0.82"/>
+  <text x="120" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">o_{t−1}</text>
+  <text x="120" y="272" text-anchor="middle" font-size="10" fill="#eee">Observation</text>
+
+  <!-- o_t -->
+  <rect x="300" y="240" width="120" height="40" rx="8" fill="#27ae60" opacity="0.82"/>
+  <text x="360" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">o_t</text>
+  <text x="360" y="272" text-anchor="middle" font-size="10" fill="#eee">Observation</text>
+
+  <!-- o_{t+1} predicted -->
+  <rect x="540" y="240" width="120" height="40" rx="8" fill="#27ae60" opacity="0.50" stroke="#27ae60" stroke-dasharray="5 3" stroke-width="1.5"/>
+  <text x="600" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">ô_{t+1}</text>
+  <text x="600" y="272" text-anchor="middle" font-size="10" fill="#fff">Predicted</text>
+
+  <!-- Arrows: z → o (decoder) -->
+  <line x1="120" y1="205" x2="120" y2="238" stroke="#27ae60" stroke-width="2" marker-end="url(#arrgreen)"/>
+  <line x1="360" y1="205" x2="360" y2="238" stroke="#27ae60" stroke-width="2" marker-end="url(#arrgreen)"/>
+  <line x1="600" y1="205" x2="600" y2="238" stroke="#27ae60" stroke-width="2" marker-end="url(#arrgreen)"/>
+
+  <!-- Arrows: o → z (encoder, upward) -->
+  <path d="M 155 252 Q 200 218 308 183" fill="none" stroke="#2980b9" stroke-width="1.8" marker-end="url(#arrblue)"/>
+  <path d="M 395 252 Q 440 218 548 183" fill="none" stroke="#2980b9" stroke-width="1.8" marker-end="url(#arrblue)"/>
+
+  <!-- ─── Labels for arrow types ─── -->
+  <text x="240" y="73" text-anchor="middle" font-size="9" fill="#8e44ad" font-style="italic">f_dyn (GRU)</text>
+  <text x="243" y="131" text-anchor="middle" font-size="9" fill="#555" font-style="italic">dynamics</text>
+  <text x="165" y="230" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">f_enc</text>
+  <text x="120" y="226" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">f_dec</text>
+
+  <!-- Bottom legend -->
+  <rect x="30" y="300" width="12" height="12" rx="2" fill="#8e44ad"/>
+  <text x="46" y="311" font-size="10" fill="#444">Recurrent state h</text>
+  <rect x="160" y="300" width="12" height="12" rx="2" fill="#f39c12"/>
+  <text x="176" y="311" font-size="10" fill="#444">Latent state z</text>
+  <rect x="270" y="300" width="12" height="12" rx="2" fill="#27ae60"/>
+  <text x="286" y="311" font-size="10" fill="#444">Observations o</text>
+  <line x1="380" y1="306" x2="400" y2="306" stroke="#2980b9" stroke-width="2"/>
+  <text x="406" y="311" font-size="10" fill="#444">Encoder path</text>
+  <line x1="490" y1="306" x2="510" y2="306" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="516" y="311" font-size="10" fill="#444">Prior / transition</text>
+</svg>
