@@ -9,6 +9,11 @@ build/
 .env
 .env.local
 
+# Compiled JS outputs (TypeScript source of truth)
+docusaurus.config.js
+sidebars.js
+src/**/*.js
+
 # Editor files
 .DS_Store
 *.swp
