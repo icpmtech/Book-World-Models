@@ -70,6 +70,11 @@ const config: Config = {
           label: '🌍 Simulator',
         },
         {
+          to: '/regime-simulator',
+          position: 'left',
+          label: '🔍 Regime Simulator',
+        },
+        {
           to: '/market-pro',
           position: 'right',
           label: '📈 Market Pro',

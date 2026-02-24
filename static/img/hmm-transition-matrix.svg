@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" width="620" height="400" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="620" height="400" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="310" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">HMM Regime Transition Matrix</text>
+  <text x="310" y="52" text-anchor="middle" font-size="11" fill="#666">Probability of transitioning from one regime to another each quarter</text>
+
+  <!-- Column headers -->
+  <text x="248" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#2ecc71">Expansion</text>
+  <text x="348" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">Overheating</text>
+  <text x="448" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#e74c3c">Contraction</text>
+  <text x="548" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#3498db">Recovery</text>
+
+  <!-- "From →" label -->
+  <text x="105" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#555">From ↓ / To →</text>
+
+  <!-- Row: Expansion -->
+  <rect x="20" y="90" width="135" height="60" rx="6" fill="#2ecc71" opacity="0.18"/>
+  <rect x="20" y="90" width="135" height="60" rx="6" fill="none" stroke="#2ecc71" stroke-width="1.5"/>
+  <text x="88" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">Expansion</text>
+  <text x="88" y="134" text-anchor="middle" font-size="10" fill="#555">Currently in</text>
+
+  <rect x="198" y="90" width="100" height="60" rx="6" fill="#2ecc71" opacity="0.55"/>
+  <text x="248" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#155724">0.72</text>
+  <text x="248" y="140" text-anchor="middle" font-size="10" fill="#155724">stay</text>
+
+  <rect x="298" y="90" width="100" height="60" rx="6" fill="#e67e22" opacity="0.28"/>
+  <text x="348" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d3000">0.20</text>
+  <text x="348" y="140" text-anchor="middle" font-size="10" fill="#7d3000">→ overheat</text>
+
+  <rect x="398" y="90" width="100" height="60" rx="6" fill="#e74c3c" opacity="0.10"/>
+  <text x="448" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d2020">0.05</text>
+  <text x="448" y="140" text-anchor="middle" font-size="10" fill="#7d2020">rare</text>
+
+  <rect x="498" y="90" width="100" height="60" rx="6" fill="#3498db" opacity="0.10"/>
+  <text x="548" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a3a6e">0.03</text>
+  <text x="548" y="140" text-anchor="middle" font-size="10" fill="#1a3a6e">rare</text>
+
+  <!-- Row: Overheating -->
+  <rect x="20" y="160" width="135" height="60" rx="6" fill="#e67e22" opacity="0.18"/>
+  <rect x="20" y="160" width="135" height="60" rx="6" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="88" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#a04000">Overheating</text>
+  <text x="88" y="204" text-anchor="middle" font-size="10" fill="#555">Currently in</text>
+
+  <rect x="198" y="160" width="100" height="60" rx="6" fill="#2ecc71" opacity="0.10"/>
+  <text x="248" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#155724">0.08</text>
+  <text x="248" y="210" text-anchor="middle" font-size="10" fill="#155724">rare</text>
+
+  <rect x="298" y="160" width="100" height="60" rx="6" fill="#e67e22" opacity="0.48"/>
+  <text x="348" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d3000">0.55</text>
+  <text x="348" y="210" text-anchor="middle" font-size="10" fill="#7d3000">stay</text>
+
+  <rect x="398" y="160" width="100" height="60" rx="6" fill="#e74c3c" opacity="0.35"/>
+  <text x="448" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d2020">0.32</text>
+  <text x="448" y="210" text-anchor="middle" font-size="10" fill="#7d2020">→ contract</text>
+
+  <rect x="498" y="160" width="100" height="60" rx="6" fill="#3498db" opacity="0.06"/>
+  <text x="548" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a3a6e">0.05</text>
+  <text x="548" y="210" text-anchor="middle" font-size="10" fill="#1a3a6e">rare</text>
+
+  <!-- Row: Contraction -->
+  <rect x="20" y="230" width="135" height="60" rx="6" fill="#e74c3c" opacity="0.18"/>
+  <rect x="20" y="230" width="135" height="60" rx="6" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="88" y="256" text-anchor="middle" font-size="12" font-weight="bold" fill="#a01010">Contraction</text>
+  <text x="88" y="274" text-anchor="middle" font-size="10" fill="#555">Currently in</text>
+
+  <rect x="198" y="230" width="100" height="60" rx="6" fill="#2ecc71" opacity="0.06"/>
+  <text x="248" y="262" text-anchor="middle" font-size="16" font-weight="bold" fill="#155724">0.04</text>
+  <text x="248" y="280" text-anchor="middle" font-size="10" fill="#155724">rare</text>
+
+  <rect x="298" y="230" width="100" height="60" rx="6" fill="#e67e22" opacity="0.06"/>
+  <text x="348" y="262" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d3000">0.06</text>
+  <text x="348" y="280" text-anchor="middle" font-size="10" fill="#7d3000">rare</text>
+
+  <rect x="398" y="230" width="100" height="60" rx="6" fill="#e74c3c" opacity="0.55"/>
+  <text x="448" y="262" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d2020">0.60</text>
+  <text x="448" y="280" text-anchor="middle" font-size="10" fill="#7d2020">stay</text>
+
+  <rect x="498" y="230" width="100" height="60" rx="6" fill="#3498db" opacity="0.30"/>
+  <text x="548" y="262" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a3a6e">0.30</text>
+  <text x="548" y="280" text-anchor="middle" font-size="10" fill="#1a3a6e">→ recover</text>
+
+  <!-- Row: Recovery -->
+  <rect x="20" y="300" width="135" height="60" rx="6" fill="#3498db" opacity="0.18"/>
+  <rect x="20" y="300" width="135" height="60" rx="6" fill="none" stroke="#3498db" stroke-width="1.5"/>
+  <text x="88" y="326" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a3a6e">Recovery</text>
+  <text x="88" y="344" text-anchor="middle" font-size="10" fill="#555">Currently in</text>
+
+  <rect x="198" y="300" width="100" height="60" rx="6" fill="#2ecc71" opacity="0.38"/>
+  <text x="248" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#155724">0.42</text>
+  <text x="248" y="350" text-anchor="middle" font-size="10" fill="#155724">→ expand</text>
+
+  <rect x="298" y="300" width="100" height="60" rx="6" fill="#e67e22" opacity="0.06"/>
+  <text x="348" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d3000">0.07</text>
+  <text x="348" y="350" text-anchor="middle" font-size="10" fill="#7d3000">rare</text>
+
+  <rect x="398" y="300" width="100" height="60" rx="6" fill="#e74c3c" opacity="0.06"/>
+  <text x="448" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#7d2020">0.06</text>
+  <text x="448" y="350" text-anchor="middle" font-size="10" fill="#7d2020">rare</text>
+
+  <rect x="498" y="300" width="100" height="60" rx="6" fill="#3498db" opacity="0.48"/>
+  <text x="548" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a3a6e">0.45</text>
+  <text x="548" y="350" text-anchor="middle" font-size="10" fill="#1a3a6e">stay</text>
+
+  <!-- Bottom note -->
+  <text x="310" y="385" text-anchor="middle" font-size="10" fill="#888">Each row sums to 1.0. Diagonal = probability of remaining in the current regime for one quarter.</text>
+</svg>
