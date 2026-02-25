@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
     'chapter-11',
     'chapter-12',
     'chapter-13',
+    'chapter-14',
     'references',
   ],
 };
