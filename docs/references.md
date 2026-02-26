@@ -2,7 +2,7 @@
 id: references
 title: References
 sidebar_label: References
-sidebar_position: 15
+sidebar_position: 17
 ---
 
 # References
@@ -72,3 +72,37 @@ sidebar_position: 15
 24. Goertzel, B., & Pennachin, C. (Eds.). (2007). **Artificial General Intelligence**. *Springer*.
 
 25. Russell, S. (2019). **Human Compatible: Artificial Intelligence and the Problem of Control**. *Viking*.
+
+## Ontologies, Knowledge Graphs, and Semantic AI
+
+26. Gruber, T. R. (1993). **A translation approach to portable ontology specifications**. *Knowledge Acquisition, 5*(2), 199–220. https://doi.org/10.1006/knac.1993.1008
+
+27. Bechhofer, S., van Harmelen, F., Hendler, J., Horrocks, I., McGuinness, D. L., Patel-Schneider, P. F., & Stein, L. A. (2004). **OWL Web Ontology Language Reference**. *W3C Recommendation*. https://www.w3.org/TR/owl-ref/
+
+28. Pan, J. Z., Vetere, G., Gomez-Perez, J. M., & Wu, H. (Eds.). (2017). **Exploiting Linked Data and Knowledge Graphs in Large Organisations**. *Springer*.
+
+29. Hogan, A., Blomqvist, E., Cochez, M., d'Amato, C., de Melo, G., Gutierrez, C., ... & Zimmermann, A. (2021). **Knowledge Graphs**. *ACM Computing Surveys, 54*(4), 1–37. https://doi.org/10.1145/3447772
+
+## LLM Agents and Tool Use
+
+30. Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). **ReAct: Synergizing Reasoning and Acting in Language Models**. *International Conference on Learning Representations (ICLR 2023)*. https://arxiv.org/abs/2210.03629
+
+31. Schick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., & Scialom, T. (2023). **Toolformer: Language Models Can Teach Themselves to Use Tools**. *Advances in Neural Information Processing Systems, 36*. https://arxiv.org/abs/2302.04761
+
+32. Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., ... & Wen, J.-R. (2024). **A Survey on Large Language Model based Autonomous Agents**. *Frontiers of Computer Science, 18*(6). https://arxiv.org/abs/2308.11432
+
+33. Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). **Generative Agents: Interactive Simulacra of Human Behavior**. *Proceedings of UIST 2023*. https://arxiv.org/abs/2304.03442
+
+## LLM-Integrated Ontologies and Neuro-Symbolic AI
+
+34. Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2024). **Unifying Large Language Models and Knowledge Graphs: A Roadmap**. *IEEE Transactions on Knowledge and Data Engineering, 36*(7), 3580–3599. https://arxiv.org/abs/2306.08302
+
+35. Zhu, Y., Wang, X., Chen, J., Qiao, S., Ou, Y., Yao, Y., ... & Zhang, N. (2023). **LLMs for Knowledge Graph Construction and Reasoning: Recent Capabilities and Future Opportunities**. *arXiv preprint arXiv:2305.13168*. https://arxiv.org/abs/2305.13168
+
+36. Ye, H., Zhang, N., Chen, H., & Chen, H. (2022). **Generative Knowledge Graph Construction: A Review**. *Proceedings of EMNLP 2022*. https://arxiv.org/abs/2210.12714
+
+## Palantir Foundry and Enterprise Ontology Platforms
+
+37. Palantir Technologies. (2023). **Palantir Ontology and AIP: Building AI Applications on a Semantic Foundation**. *Palantir Technical Documentation*. https://www.palantir.com/platforms/foundry/
+
+38. Noy, N. F., & McGuinness, D. L. (2001). **Ontology Development 101: A Guide to Creating Your First Ontology**. *Stanford Knowledge Systems Laboratory Technical Report KSL-01-05*. https://protege.stanford.edu/publications/ontology_development/ontology101.pdf

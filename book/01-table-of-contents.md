@@ -14,4 +14,5 @@
 12. [The Future of Intelligent Capital Allocation](13-chapter-12.md)
 13. [World Models in Finance: Improving Investment Returns and Decision Making in Stock Markets](15-chapter-13.md)
 14. [Price Prediction World Model: Forecasting Asset Prices with World Model Concepts](16-chapter-14.md)
-15. [References](14-references.md)
+15. [Ontology-Driven World Models: From Palantir Foundry to LLM-Integrated Intelligence](17-chapter-15.md)
+16. [References](14-references.md)

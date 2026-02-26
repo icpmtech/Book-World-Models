@@ -96,6 +96,27 @@ const chapters: ChapterItem[] = [
     description:
       'Simulate before allocating, stress-test before deploying, optimize across probabilistic futures.',
   },
+  {
+    number: 13,
+    title: 'World Models in Stock Markets',
+    slug: 'chapter-13',
+    description:
+      'How World Models concretely improve investment returns and support decision-making in equity markets.',
+  },
+  {
+    number: 14,
+    title: 'Price Prediction World Model',
+    slug: 'chapter-14',
+    description:
+      'Reframing price forecasting as latent-state inference — generating full probability distributions over future price trajectories.',
+  },
+  {
+    number: 15,
+    title: 'Ontology-Driven World Models',
+    slug: 'chapter-15',
+    description:
+      'From Palantir Foundry to LLM-integrated intelligence — grounding World Models in structured knowledge graphs and agentic reasoning.',
+  },
 ];
 
 function ChapterCard({number, title, slug, description}: ChapterItem) {

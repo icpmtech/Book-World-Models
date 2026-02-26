@@ -30,6 +30,9 @@ Rather than predicting the next word in a sequence, a financial world model pred
 - [Chapter 10 — Risk, Ethics, and Market Reflexivity](book/11-chapter-10.md)
 - [Chapter 11 — Toward Financial AGI](book/12-chapter-11.md)
 - [Chapter 12 — The Future of Intelligent Capital Allocation](book/13-chapter-12.md)
+- [Chapter 13 — World Models in Stock Markets](book/15-chapter-13.md)
+- [Chapter 14 — Price Prediction World Model](book/16-chapter-14.md)
+- [Chapter 15 — Ontology-Driven World Models](book/17-chapter-15.md)
 - [Complete Book (Single File)](book/financial-world-models.md)
 
 ---

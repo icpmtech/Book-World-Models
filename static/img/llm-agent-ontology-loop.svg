@@ -1,0 +1,112 @@
+<svg viewBox="0 0 820 560" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="560" fill="#f8fafc" rx="12"/>
+  <text x="410" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">LLM Agent — Ontology — World Model Loop</text>
+  <text x="410" y="57" text-anchor="middle" font-size="11" fill="#64748b">Perceive → Reason → Simulate → Act → Observe</text>
+
+  <!-- Central World Model -->
+  <ellipse cx="410" cy="300" rx="100" ry="60" fill="#f3e8ff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="410" y="295" text-anchor="middle" font-size="13" font-weight="700" fill="#6b21a8">World</text>
+  <text x="410" y="313" text-anchor="middle" font-size="13" font-weight="700" fill="#6b21a8">Model</text>
+
+  <!-- Ontology node (top) -->
+  <rect x="300" y="80" width="220" height="70" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="410" y="108" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">Ontology</text>
+  <text x="410" y="126" text-anchor="middle" font-size="11" fill="#3730a3">Knowledge Graph · Entities · Relations</text>
+  <text x="410" y="141" text-anchor="middle" font-size="11" fill="#3730a3">Semantic Types · Constraints</text>
+
+  <!-- LLM Agent (left) -->
+  <rect x="60" y="265" width="190" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="295" text-anchor="middle" font-size="13" font-weight="600" fill="#92400e">LLM Agent</text>
+  <text x="155" y="314" text-anchor="middle" font-size="11" fill="#78350f">Query · Reason · Plan</text>
+  <text x="155" y="330" text-anchor="middle" font-size="11" fill="#78350f">Generate Actions</text>
+
+  <!-- Observation / Environment (right) -->
+  <rect x="570" y="265" width="190" height="80" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="665" y="293" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">Environment</text>
+  <text x="665" y="312" text-anchor="middle" font-size="11" fill="#166534">Market Data · Prices</text>
+  <text x="665" y="328" text-anchor="middle" font-size="11" fill="#166534">Signals · Events</text>
+
+  <!-- Action / Execution (bottom) -->
+  <rect x="300" y="430" width="220" height="70" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="2"/>
+  <text x="410" y="458" text-anchor="middle" font-size="13" font-weight="600" fill="#be123c">Action Execution</text>
+  <text x="410" y="476" text-anchor="middle" font-size="11" fill="#9f1239">Trade Orders · Risk Limits</text>
+  <text x="410" y="491" text-anchor="middle" font-size="11" fill="#9f1239">Portfolio Rebalancing</text>
+
+  <!-- ── Arrows ── -->
+  <!-- Ontology → LLM Agent (grounding context) -->
+  <path d="M300,130 Q155,130 155,263" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#aBlue)"/>
+  <text x="180" y="190" text-anchor="middle" font-size="10" fill="#1d4ed8" transform="rotate(-60,180,190)">grounds</text>
+
+  <!-- Ontology → World Model (semantic structure) -->
+  <path d="M410,150 L410,238" fill="none" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#aBlue)"/>
+  <text x="427" y="200" text-anchor="start" font-size="10" fill="#1d4ed8">semantic structure</text>
+
+  <!-- LLM Agent → World Model (simulation queries) -->
+  <path d="M250,300 L308,300" fill="none" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#aAmber)"/>
+  <text x="258" y="292" text-anchor="middle" font-size="10" fill="#92400e">simulate</text>
+
+  <!-- World Model → LLM Agent (forecasts) -->
+  <path d="M310,315 L252,315" fill="none" stroke="#a855f7" stroke-width="1.8" marker-end="url(#aPurple)"/>
+  <text x="275" y="330" text-anchor="middle" font-size="10" fill="#7e22ce">forecasts</text>
+
+  <!-- Environment → World Model (observations) -->
+  <path d="M570,300 L512,300" fill="none" stroke="#22c55e" stroke-width="1.8" marker-end="url(#aGreen)"/>
+  <text x="548" y="292" text-anchor="middle" font-size="10" fill="#15803d">observe</text>
+
+  <!-- World Model → Environment (actions) -->
+  <path d="M510,315 L568,315" fill="none" stroke="#a855f7" stroke-width="1.8" marker-end="url(#aPurple)"/>
+  <text x="540" y="330" text-anchor="middle" font-size="10" fill="#7e22ce">actions</text>
+
+  <!-- LLM Agent → Action Execution -->
+  <path d="M155,345 Q155,460 298,460" fill="none" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#aAmber)"/>
+  <text x="175" y="415" text-anchor="middle" font-size="10" fill="#92400e">execute</text>
+
+  <!-- Action Execution → Environment (feedback) -->
+  <path d="M520,460 Q665,460 665,347" fill="none" stroke="#f43f5e" stroke-width="1.8" marker-end="url(#aRed)"/>
+  <text x="620" y="424" text-anchor="middle" font-size="10" fill="#be123c">feedback</text>
+
+  <!-- Ontology → Environment (context) -->
+  <path d="M520,115 Q665,115 665,263" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#aBlue)"/>
+  <text x="620" y="175" text-anchor="middle" font-size="10" fill="#1d4ed8">context</text>
+
+  <!-- ── Labels on steps ── -->
+  <circle cx="100" cy="232" r="13" fill="#f59e0b"/>
+  <text x="100" y="236" text-anchor="middle" font-size="11" font-weight="700" fill="white">1</text>
+  <text x="115" y="228" font-size="10" fill="#78350f">Perceive</text>
+
+  <circle cx="330" cy="208" r="13" fill="#3b82f6"/>
+  <text x="330" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="white">2</text>
+  <text x="345" y="204" font-size="10" fill="#1d4ed8">Reason</text>
+
+  <circle cx="385" cy="245" r="13" fill="#a855f7"/>
+  <text x="385" y="249" text-anchor="middle" font-size="11" font-weight="700" fill="white">3</text>
+  <text x="400" y="241" font-size="10" fill="#7e22ce">Simulate</text>
+
+  <circle cx="220" cy="392" r="13" fill="#f43f5e"/>
+  <text x="220" y="396" text-anchor="middle" font-size="11" font-weight="700" fill="white">4</text>
+  <text x="235" y="388" font-size="10" fill="#be123c">Act</text>
+
+  <circle cx="695" cy="382" r="13" fill="#22c55e"/>
+  <text x="695" y="386" text-anchor="middle" font-size="11" font-weight="700" fill="white">5</text>
+  <text x="710" y="378" font-size="10" fill="#15803d">Observe</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#3b82f6"/>
+    </marker>
+    <marker id="aGreen" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#22c55e"/>
+    </marker>
+    <marker id="aAmber" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="aPurple" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#a855f7"/>
+    </marker>
+    <marker id="aRed" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#f43f5e"/>
+    </marker>
+  </defs>
+</svg>
