@@ -15,4 +15,5 @@
 13. [World Models in Finance: Improving Investment Returns and Decision Making in Stock Markets](15-chapter-13.md)
 14. [Price Prediction World Model: Forecasting Asset Prices with World Model Concepts](16-chapter-14.md)
 15. [Ontology-Driven World Models: From Palantir Foundry to LLM-Integrated Intelligence](17-chapter-15.md)
-16. [References](14-references.md)
+16. [World Models for Algorithmic, HFT, and Institutional Execution Traders](18-chapter-16.md)
+17. [References](14-references.md)
