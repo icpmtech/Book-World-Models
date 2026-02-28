@@ -1,0 +1,109 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="580" fill="#f8fafc" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Multi-Horizon Price Engine — System Architecture</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#64748b">World Models · Portfolio Ontology · Economic Events · MORL · Backtesting</text>
+
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Row 1: Market Data → World Model → Forecaster -->
+  <!-- Market Data Ingestion -->
+  <rect x="40" y="90" width="170" height="80" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="125" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">Market Data</text>
+  <text x="125" y="136" text-anchor="middle" font-size="11" fill="#1e40af">Ingestion</text>
+  <text x="125" y="153" text-anchor="middle" font-size="10" fill="#3b82f6">Tick · OHLCV · News</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="130" x2="278" y2="130" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+
+  <!-- World Model (VMC Core) -->
+  <rect x="280" y="90" width="170" height="80" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="365" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">World Model</text>
+  <text x="365" y="136" text-anchor="middle" font-size="11" fill="#1e40af">VMC Core</text>
+  <text x="365" y="153" text-anchor="middle" font-size="10" fill="#3b82f6">Encoder · Dynamics · Decoder</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="130" x2="518" y2="130" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+
+  <!-- Multi-Horizon Forecaster -->
+  <rect x="520" y="90" width="170" height="80" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="605" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">Multi-Horizon</text>
+  <text x="605" y="136" text-anchor="middle" font-size="11" fill="#1e40af">Forecaster</text>
+  <text x="605" y="153" text-anchor="middle" font-size="10" fill="#3b82f6">min · hr · day · week</text>
+
+  <!-- Forecast outputs (right side) -->
+  <rect x="730" y="90" width="130" height="80" rx="10" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="795" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#0369a1">Price Forecasts</text>
+  <text x="795" y="132" text-anchor="middle" font-size="10" fill="#0369a1">μ ± σ distributions</text>
+  <text x="795" y="148" text-anchor="middle" font-size="10" fill="#0369a1">per horizon</text>
+  <line x1="690" y1="130" x2="728" y2="130" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Vertical arrows from row 1 down -->
+  <line x1="125" y1="170" x2="125" y2="248" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="365" y1="170" x2="365" y2="248" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="605" y1="170" x2="605" y2="248" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Row 2: Portfolio Ontology, Economic Event Engine, Backtesting -->
+  <!-- Portfolio Ontology -->
+  <rect x="40" y="250" width="170" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="125" y="278" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">Portfolio</text>
+  <text x="125" y="296" text-anchor="middle" font-size="11" fill="#166534">Ontology</text>
+  <text x="125" y="313" text-anchor="middle" font-size="10" fill="#22c55e">Assets · Events · Targets</text>
+
+  <!-- Economic Event Engine -->
+  <rect x="280" y="250" width="170" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="365" y="278" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">Economic Event</text>
+  <text x="365" y="296" text-anchor="middle" font-size="11" fill="#166534">Engine</text>
+  <text x="365" y="313" text-anchor="middle" font-size="10" fill="#22c55e">CPI · NFP · Earnings · Fed</text>
+
+  <!-- Backtesting Framework -->
+  <rect x="520" y="250" width="170" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="605" y="278" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">Backtesting</text>
+  <text x="605" y="296" text-anchor="middle" font-size="11" fill="#166534">Framework</text>
+  <text x="605" y="313" text-anchor="middle" font-size="10" fill="#22c55e">Walk-forward · IC · Sharpe</text>
+
+  <!-- Portfolio Ontology feeds all three top boxes (shared knowledge) -->
+  <line x1="125" y1="250" x2="125" y2="172" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowGreen)"/>
+  <line x1="365" y1="250" x2="365" y2="172" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowGreen)"/>
+  <line x1="605" y1="250" x2="605" y2="172" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowGreen)"/>
+
+  <!-- Arrows down to MORL -->
+  <line x1="215" y1="290" x2="278" y2="290" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="450" y1="290" x2="518" y2="290" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="125" y1="330" x2="125" y2="378" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="365" y1="330" x2="365" y2="378" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="605" y1="330" x2="605" y2="378" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Row 3: MORL + Agent Orchestration (centred, wider) -->
+  <rect x="200" y="380" width="340" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="370" y="408" text-anchor="middle" font-size="13" font-weight="600" fill="#92400e">MORL + Agent Orchestration</text>
+  <text x="370" y="426" text-anchor="middle" font-size="11" fill="#b45309">Multi-Objective RL · Pareto Navigation</text>
+  <text x="370" y="444" text-anchor="middle" font-size="10" fill="#d97706">Momentum · Macro · Sentiment · Risk Agents</text>
+
+  <!-- Vertical lines down to MORL from row 2 -->
+  <line x1="370" y1="330" x2="370" y2="378" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- MORL outputs -->
+  <line x1="370" y1="460" x2="370" y2="498" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#arrowAmber)"/>
+  <rect x="230" y="500" width="280" height="56" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="370" y="524" text-anchor="middle" font-size="13" font-weight="600" fill="#92400e">Trade Signal &amp; Portfolio Weights</text>
+  <text x="370" y="543" text-anchor="middle" font-size="11" fill="#b45309">Pareto-optimal · risk-adjusted · event-conditioned</text>
+
+  <!-- Shared ontology label -->
+  <text x="750" y="300" text-anchor="middle" font-size="11" fill="#15803d" font-style="italic">shared knowledge layer</text>
+  <line x1="730" y1="290" x2="720" y2="290" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="690" y1="290" x2="635" y2="290" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>

@@ -55,11 +55,15 @@ The system presented in this chapter integrates five components:
 └─────────────────────────────────────────────────────────────┘
 ```
 
+![Multi-Horizon Price Engine — System Architecture](/img/multi-horizon-price-engine.svg)
+
 ---
 
 ## Portfolio Ontology for Price Prediction
 
 Building on Chapter 15's ODWM, the **Portfolio Ontology** extends the knowledge graph with classes specific to multi-asset forecasting and portfolio construction.
+
+![Ontology-Driven World Model Architecture](/img/ontology-world-model-architecture.svg)
 
 ### Extended Ontology Schema
 
@@ -166,6 +170,8 @@ class OntologyFeatureEngineer:
 ## Multi-Horizon World Model Forecaster
 
 The core forecasting engine uses the World Model's latent dynamics to generate price distributions at multiple horizons simultaneously.
+
+![Multi-Horizon Forecasting Architecture](/img/multi-horizon-forecasting.svg)
 
 ### Latent State Encoding
 
@@ -295,6 +301,8 @@ class ProbabilisticPriceDecoder:
 ## Economic Event Engine
 
 Economic events are **regime-switching catalysts**. A payroll miss, a hawkish Fed statement, or an earnings surprise can render every pre-event forecast stale within seconds. The Economic Event Engine (EEE) addresses this by conditioning the World Model on the full macro calendar.
+
+![Economic Event Engine — Taxonomy, Conditioning, and LLM Interpretation](/img/economic-event-engine.svg)
 
 ### Event Taxonomy
 
@@ -443,6 +451,8 @@ Multi-Objective Reinforcement Learning (MORL) extends standard RL to settings wh
 - **Risk control** — keep volatility and drawdown within tolerance
 - **Turnover minimisation** — reduce transaction costs and market impact
 - **Tracking error management** — stay close to benchmark when required
+
+![MORL — Pareto Frontier for Multi-Objective Portfolio Optimisation](/img/morl-pareto-frontier.svg)
 
 ### Reward Vector Design
 
@@ -613,6 +623,8 @@ class ParetoFrontierNavigator:
 
 Price forecasting benefits from a **market of opinions**: different agents specialise in different signals and their outputs are aggregated into a consensus forecast.
 
+![Multi-Agent Forecasting Framework — Specialist Agents and Orchestrator](/img/multi-agent-forecasting.svg)
+
 ### Agent Taxonomy
 
 | Agent | Specialisation | Primary Signal | Horizon Focus |
@@ -764,6 +776,8 @@ class MomentumForecastingAgent:
 ## Backtesting Framework
 
 No forecasting system is complete without rigorous backtesting. The backtesting framework here is designed to be **statistically honest**: it enforces look-ahead prevention, accounts for transaction costs and market impact, and provides a comprehensive set of performance statistics.
+
+![Backtesting Framework — Walk-Forward Validation and Performance Metrics](/img/backtesting-walk-forward.svg)
 
 ### Backtesting Engine
 
