@@ -1,0 +1,146 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="560" fill="#f8fafc" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Economic Event Engine</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#64748b">Event Taxonomy · Gated Latent Conditioning · LLM Narrative Interpretation</text>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- Event Taxonomy (left column) -->
+  <rect x="20" y="80" width="200" height="370" rx="10" fill="#fff1f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="120" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#b91c1c">Event Taxonomy</text>
+
+  <!-- HIGH impact -->
+  <rect x="35" y="115" width="170" height="28" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+  <text x="75" y="134" text-anchor="start" font-size="10" font-weight="600" fill="#7f1d1d">HIGH</text>
+  <text x="110" y="134" text-anchor="middle" font-size="10" fill="#991b1b">Central Bank Decision</text>
+
+  <rect x="35" y="148" width="170" height="28" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+  <text x="75" y="167" text-anchor="start" font-size="10" font-weight="600" fill="#7f1d1d">HIGH</text>
+  <text x="110" y="167" text-anchor="middle" font-size="10" fill="#991b1b">Non-Farm Payrolls</text>
+
+  <rect x="35" y="181" width="170" height="28" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+  <text x="75" y="200" text-anchor="start" font-size="10" font-weight="600" fill="#7f1d1d">HIGH</text>
+  <text x="110" y="200" text-anchor="middle" font-size="10" fill="#991b1b">CPI / Inflation Release</text>
+
+  <rect x="35" y="214" width="170" height="28" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+  <text x="75" y="233" text-anchor="start" font-size="10" font-weight="600" fill="#7f1d1d">HIGH</text>
+  <text x="110" y="233" text-anchor="middle" font-size="10" fill="#991b1b">GDP Advance Estimate</text>
+
+  <!-- MEDIUM impact -->
+  <rect x="35" y="250" width="170" height="28" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="80" y="269" text-anchor="start" font-size="10" font-weight="600" fill="#7c2d12">MED</text>
+  <text x="115" y="269" text-anchor="middle" font-size="10" fill="#9a3412">Earnings Release</text>
+
+  <rect x="35" y="283" width="170" height="28" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="80" y="302" text-anchor="start" font-size="10" font-weight="600" fill="#7c2d12">MED</text>
+  <text x="115" y="302" text-anchor="middle" font-size="10" fill="#9a3412">ISM Manufacturing</text>
+
+  <rect x="35" y="316" width="170" height="28" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="80" y="335" text-anchor="start" font-size="10" font-weight="600" fill="#7c2d12">MED</text>
+  <text x="115" y="335" text-anchor="middle" font-size="10" fill="#9a3412">Consumer Confidence</text>
+
+  <!-- LOW impact -->
+  <rect x="35" y="349" width="170" height="28" rx="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="73" y="368" text-anchor="start" font-size="10" font-weight="600" fill="#713f12">LOW</text>
+  <text x="115" y="368" text-anchor="middle" font-size="10" fill="#854d0e">Geopolitical Shock</text>
+
+  <rect x="35" y="382" width="170" height="28" rx="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="73" y="401" text-anchor="start" font-size="10" font-weight="600" fill="#713f12">LOW</text>
+  <text x="115" y="401" text-anchor="middle" font-size="10" fill="#854d0e">Analyst Upgrade / Downgrade</text>
+
+  <!-- Middle column: Event Conditioner -->
+  <rect x="270" y="150" width="200" height="180" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="370" y="175" text-anchor="middle" font-size="13" font-weight="600" fill="#5b21b6">Event Conditioner</text>
+  <text x="370" y="193" text-anchor="middle" font-size="10" fill="#6d28d9">EconomicEventConditioner(nn.Module)</text>
+
+  <rect x="285" y="205" width="170" height="40" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="370" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">Event Embedding</text>
+  <text x="370" y="238" text-anchor="middle" font-size="10" fill="#5b21b6">nn.Embedding(n_types, 64)</text>
+
+  <rect x="285" y="255" width="170" height="40" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="370" y="272" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">Surprise MLP</text>
+  <text x="370" y="288" text-anchor="middle" font-size="10" fill="#5b21b6">[e, surprise, impact] → δ</text>
+
+  <rect x="285" y="305" width="170" height="30" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="370" y="325" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">Gate: z' = z + g · δ</text>
+
+  <!-- Arrow: taxonomy → conditioner -->
+  <line x1="220" y1="265" x2="268" y2="265" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrowRed)"/>
+  <text x="244" y="257" text-anchor="middle" font-size="9" fill="#dc2626">event</text>
+
+  <!-- Latent State (before/after) -->
+  <rect x="270" y="80" width="90" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="315" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">z_t (prior)</text>
+  <text x="315" y="120" text-anchor="middle" font-size="10" fill="#b45309">latent state</text>
+  <line x1="315" y1="130" x2="315" y2="148" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+  <rect x="380" y="80" width="90" height="50" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="425" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#15803d">z_t' (posterior)</text>
+  <text x="425" y="120" text-anchor="middle" font-size="10" fill="#166534">conditioned</text>
+  <line x1="370" y1="335" x2="425" y2="335" stroke="#7c3aed" stroke-width="1"/>
+  <line x1="425" y1="335" x2="425" y2="132" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+  <!-- LLM Interpretation (right column) -->
+  <rect x="530" y="80" width="340" height="370" rx="10" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="700" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#0369a1">LLM Narrative Interpretation</text>
+
+  <rect x="550" y="120" width="300" height="55" rx="8" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="700" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">Economic Headline Parsing</text>
+  <text x="700" y="160" text-anchor="middle" font-size="10" fill="#075985">"Fed raises rates 50bps — hawkish tone"</text>
+
+  <rect x="550" y="190" width="300" height="55" rx="8" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="700" y="212" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">Surprise Quantification</text>
+  <text x="700" y="230" text-anchor="middle" font-size="10" fill="#075985">actual vs consensus → surprise_magnitude</text>
+
+  <rect x="550" y="260" width="300" height="55" rx="8" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="700" y="282" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">Asset Impact Inference</text>
+  <text x="700" y="300" text-anchor="middle" font-size="10" fill="#075985">ontology.get_affected_assets(event)</text>
+
+  <rect x="550" y="330" width="300" height="55" rx="8" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="700" y="352" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">Forecast Conditioning Signal</text>
+  <text x="700" y="370" text-anchor="middle" font-size="10" fill="#075985">structured JSON → Event Conditioner</text>
+
+  <rect x="550" y="400" width="300" height="40" rx="8" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="700" y="426" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">Ontology-Grounded Reasoning</text>
+
+  <!-- Arrow: LLM → Conditioner -->
+  <line x1="530" y1="355" x2="472" y2="305" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowPurple)"/>
+
+  <!-- Event timeline at bottom -->
+  <rect x="20" y="475" width="860" height="65" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="450" y="496" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">Event-Conditioned Forecast Lifecycle</text>
+
+  <!-- Timeline bar -->
+  <line x1="50" y1="520" x2="850" y2="520" stroke="#94a3b8" stroke-width="2"/>
+  <!-- Timeline markers -->
+  <circle cx="120" cy="520" r="5" fill="#ef4444"/>
+  <text x="120" y="514" text-anchor="middle" font-size="9" fill="#dc2626">T−3d</text>
+  <text x="120" y="534" text-anchor="middle" font-size="9" fill="#64748b">pre-event hedge</text>
+
+  <circle cx="350" cy="520" r="5" fill="#f59e0b"/>
+  <text x="350" y="514" text-anchor="middle" font-size="9" fill="#b45309">T−1d</text>
+  <text x="350" y="534" text-anchor="middle" font-size="9" fill="#64748b">reduce exposure</text>
+
+  <circle cx="530" cy="520" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="530" y="514" text-anchor="middle" font-size="9" font-weight="600" fill="#dc2626">Event</text>
+  <text x="530" y="534" text-anchor="middle" font-size="9" fill="#64748b">z_t conditioned</text>
+
+  <circle cx="700" cy="520" r="5" fill="#22c55e"/>
+  <text x="700" y="514" text-anchor="middle" font-size="9" fill="#15803d">T+1d</text>
+  <text x="700" y="534" text-anchor="middle" font-size="9" fill="#64748b">updated forecast</text>
+
+  <circle cx="820" cy="520" r="5" fill="#3b82f6"/>
+  <text x="820" y="514" text-anchor="middle" font-size="9" fill="#1d4ed8">T+3d</text>
+  <text x="820" y="534" text-anchor="middle" font-size="9" fill="#64748b">return to neutral</text>
+</svg>

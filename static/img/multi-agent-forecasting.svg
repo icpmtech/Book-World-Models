@@ -1,0 +1,108 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="560" fill="#f8fafc" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Multi-Agent Forecasting Framework</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#64748b">Specialist Agents · Regime-Conditioned Meta-Learner · Orchestrator</text>
+
+  <defs>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrowSlateM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowOrangeM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- World Model State (top centre input) -->
+  <rect x="320" y="70" width="260" height="50" rx="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="450" y="93" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">World Model Latent State z_t</text>
+  <text x="450" y="111" text-anchor="middle" font-size="10" fill="#2563eb">+ Market Observations + Ontology Context</text>
+
+  <!-- Agent boxes (two rows of three) -->
+  <!-- Row 1 agents -->
+  <!-- Momentum Agent -->
+  <rect x="30" y="160" width="140" height="90" rx="9" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="100" y="183" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">Momentum</text>
+  <text x="100" y="199" text-anchor="middle" font-size="11" fill="#166534">Agent</text>
+  <text x="100" y="218" text-anchor="middle" font-size="9" fill="#166534">Trend following</text>
+  <text x="100" y="232" text-anchor="middle" font-size="9" fill="#166534">1 hour – 1 day</text>
+
+  <!-- Macro Agent -->
+  <rect x="195" y="160" width="140" height="90" rx="9" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="265" y="183" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">Macro</text>
+  <text x="265" y="199" text-anchor="middle" font-size="11" fill="#166534">Agent</text>
+  <text x="265" y="218" text-anchor="middle" font-size="9" fill="#166534">Regime detection</text>
+  <text x="265" y="232" text-anchor="middle" font-size="9" fill="#166534">1 day – 1 week</text>
+
+  <!-- Sentiment Agent -->
+  <rect x="360" y="160" width="140" height="90" rx="9" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="430" y="183" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">Sentiment</text>
+  <text x="430" y="199" text-anchor="middle" font-size="11" fill="#166534">Agent</text>
+  <text x="430" y="218" text-anchor="middle" font-size="9" fill="#166534">News &amp; social media</text>
+  <text x="430" y="232" text-anchor="middle" font-size="9" fill="#166534">1 hour – 1 day</text>
+
+  <!-- Microstructure Agent -->
+  <rect x="525" y="160" width="140" height="90" rx="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="595" y="183" text-anchor="middle" font-size="12" font-weight="600" fill="#1d4ed8">Microstructure</text>
+  <text x="595" y="199" text-anchor="middle" font-size="11" fill="#1e40af">Agent</text>
+  <text x="595" y="218" text-anchor="middle" font-size="9" fill="#1e40af">Order-flow analysis</text>
+  <text x="595" y="232" text-anchor="middle" font-size="9" fill="#1e40af">1 min – 1 hour</text>
+
+  <!-- Earnings Agent -->
+  <rect x="690" y="160" width="140" height="90" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="760" y="183" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">Earnings</text>
+  <text x="760" y="199" text-anchor="middle" font-size="11" fill="#b45309">Agent</text>
+  <text x="760" y="218" text-anchor="middle" font-size="9" fill="#b45309">Earnings surprise</text>
+  <text x="760" y="232" text-anchor="middle" font-size="9" fill="#b45309">Pre/post earnings</text>
+
+  <!-- Risk Agent (below, centred) -->
+  <rect x="360" y="290" width="140" height="90" rx="9" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="430" y="313" text-anchor="middle" font-size="12" font-weight="600" fill="#b91c1c">Risk</text>
+  <text x="430" y="329" text-anchor="middle" font-size="11" fill="#dc2626">Agent</text>
+  <text x="430" y="348" text-anchor="middle" font-size="9" fill="#dc2626">Tail risk detection</text>
+  <text x="430" y="362" text-anchor="middle" font-size="9" fill="#dc2626">All horizons</text>
+
+  <!-- Arrows: WM state → each agent -->
+  <line x1="390" y1="120" x2="130" y2="158" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+  <line x1="410" y1="120" x2="270" y2="158" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+  <line x1="440" y1="120" x2="435" y2="158" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+  <line x1="470" y1="120" x2="590" y2="158" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+  <line x1="500" y1="120" x2="750" y2="158" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+  <line x1="450" y1="120" x2="450" y2="288" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowTeal)"/>
+
+  <!-- Individual forecast labels above arrows to orchestrator -->
+  <!-- Arrows: agents → orchestrator -->
+  <line x1="100" y1="250" x2="300" y2="415" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="265" y1="250" x2="330" y2="415" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="430" y1="250" x2="380" y2="415" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="595" y1="250" x2="480" y2="415" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="760" y1="250" x2="520" y2="415" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="430" y1="380" x2="430" y2="415" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+
+  <!-- Orchestrator / Meta-Learner -->
+  <rect x="240" y="418" width="380" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="443" text-anchor="middle" font-size="13" font-weight="600" fill="#5b21b6">ForecastingAgentOrchestrator</text>
+  <text x="430" y="461" text-anchor="middle" font-size="11" fill="#6d28d9">Regime-Conditioned Meta-Learner</text>
+  <text x="430" y="479" text-anchor="middle" font-size="10" fill="#7c3aed">Weighted ensemble · Disagreement detection · Conflict resolution</text>
+
+  <!-- Arrow: Orchestrator → Final forecast -->
+  <line x1="430" y1="498" x2="430" y2="530" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <rect x="280" y="532" width="300" height="18" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="430" y="546" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">Ensemble Forecast (μ, σ, confidence)</text>
+
+  <!-- Regime conditioning input (right side of orchestrator) -->
+  <rect x="660" y="435" width="200" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+  <text x="760" y="456" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">Regime Context</text>
+  <text x="760" y="472" text-anchor="middle" font-size="10" fill="#b45309">bull · bear · volatile · trending</text>
+  <line x1="660" y1="460" x2="622" y2="460" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowOrangeM)"/>
+
+  <!-- Agent forecast type labels -->
+  <text x="170" y="345" text-anchor="middle" font-size="9" fill="#15803d" font-style="italic">price_forecast, conf</text>
+  <text x="310" y="355" text-anchor="middle" font-size="9" fill="#15803d" font-style="italic">regime_prob, horizon</text>
+  <text x="510" y="345" text-anchor="middle" font-size="9" fill="#1d4ed8" font-style="italic">flow_signal, spread</text>
+  <text x="680" y="345" text-anchor="middle" font-size="9" fill="#b45309" font-style="italic">earnings_surprise_est</text>
+  <text x="380" y="405" text-anchor="middle" font-size="9" fill="#dc2626" font-style="italic">tail_risk_alert</text>
+</svg>

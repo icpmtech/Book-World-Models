@@ -1,0 +1,130 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="560" fill="#f8fafc" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">MORL — Multi-Objective Portfolio Optimisation</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#64748b">Preference-Conditioned Agent · Pareto Frontier Navigation · FiLM Conditioning</text>
+
+  <defs>
+    <marker id="arrowAmberM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowBlueM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreenM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowRedM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Left: Objectives -->
+  <rect x="20" y="80" width="170" height="280" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="105" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#92400e">Objectives (λ)</text>
+
+  <rect x="35" y="115" width="140" height="38" rx="7" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="105" y="131" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Return Max</text>
+  <text x="105" y="147" text-anchor="middle" font-size="10" fill="#92400e">λ₁: annualised alpha</text>
+
+  <rect x="35" y="162" width="140" height="38" rx="7" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="105" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Risk Control</text>
+  <text x="105" y="194" text-anchor="middle" font-size="10" fill="#92400e">λ₂: volatility / VaR</text>
+
+  <rect x="35" y="209" width="140" height="38" rx="7" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="105" y="225" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Turnover Min</text>
+  <text x="105" y="241" text-anchor="middle" font-size="10" fill="#92400e">λ₃: transaction cost</text>
+
+  <rect x="35" y="256" width="140" height="38" rx="7" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="105" y="272" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Tracking Error</text>
+  <text x="105" y="288" text-anchor="middle" font-size="10" fill="#92400e">λ₄: vs benchmark</text>
+
+  <rect x="35" y="303" width="140" height="38" rx="7" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="105" y="319" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Drawdown Control</text>
+  <text x="105" y="335" text-anchor="middle" font-size="10" fill="#92400e">λ₅: max drawdown</text>
+
+  <!-- Arrow: λ → agent -->
+  <line x1="190" y1="220" x2="248" y2="220" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrowAmberM)"/>
+
+  <!-- Centre: MORL Agent -->
+  <rect x="250" y="130" width="200" height="200" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="350" y="155" text-anchor="middle" font-size="13" font-weight="600" fill="#5b21b6">MORL Agent</text>
+  <text x="350" y="173" text-anchor="middle" font-size="10" fill="#6d28d9">FiLM Conditioning</text>
+
+  <rect x="265" y="183" width="170" height="36" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="350" y="199" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">FiLM γ(λ) · β(λ)</text>
+  <text x="350" y="213" text-anchor="middle" font-size="10" fill="#5b21b6">preference modulation</text>
+
+  <rect x="265" y="228" width="170" height="36" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="350" y="244" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">Shared Trunk</text>
+  <text x="350" y="260" text-anchor="middle" font-size="10" fill="#5b21b6">512 → 256 (LayerNorm + SiLU)</text>
+
+  <rect x="265" y="273" width="80" height="40" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="305" y="291" text-anchor="middle" font-size="10" font-weight="600" fill="#4c1d95">Policy Head</text>
+  <text x="305" y="306" text-anchor="middle" font-size="10" fill="#5b21b6">weights</text>
+
+  <rect x="355" y="273" width="80" height="40" rx="7" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="395" y="291" text-anchor="middle" font-size="10" font-weight="600" fill="#4c1d95">Value Head</text>
+  <text x="395" y="306" text-anchor="middle" font-size="10" fill="#5b21b6">V(s,λ)</text>
+
+  <!-- World model state input -->
+  <rect x="250" y="70" width="200" height="46" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="350" y="91" text-anchor="middle" font-size="11" font-weight="600" fill="#1d4ed8">World Model State z_world</text>
+  <text x="350" y="107" text-anchor="middle" font-size="10" fill="#2563eb">+ Portfolio State vector</text>
+  <line x1="350" y1="116" x2="350" y2="128" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlueM)"/>
+
+  <!-- Right: Pareto Frontier chart -->
+  <rect x="510" y="70" width="370" height="380" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="695" y="96" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">Pareto Frontier</text>
+  <text x="695" y="114" text-anchor="middle" font-size="11" fill="#166534">Return vs Risk Trade-off</text>
+
+  <!-- Chart axes -->
+  <line x1="560" y1="400" x2="860" y2="400" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowBlueM)"/>
+  <line x1="560" y1="400" x2="560" y2="135" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGreenM)"/>
+  <text x="715" y="425" text-anchor="middle" font-size="11" fill="#475569">Risk (Volatility / Drawdown)</text>
+  <text x="538" y="270" text-anchor="middle" font-size="11" fill="#475569" transform="rotate(-90, 538, 270)">Expected Return</text>
+
+  <!-- Pareto curve -->
+  <path d="M 600,360 C 630,310 670,255 720,210 C 760,175 800,155 845,148" stroke="#22c55e" stroke-width="2.5" fill="none"/>
+  <!-- Dominated region (shaded) -->
+  <path d="M 600,360 C 630,310 670,255 720,210 C 760,175 800,155 845,148 L 845,400 L 600,400 Z" fill="#dcfce7" opacity="0.4"/>
+  <text x="750" y="350" text-anchor="middle" font-size="10" fill="#15803d" font-style="italic">dominated region</text>
+
+  <!-- Pareto points with preference labels -->
+  <circle cx="600" cy="360" r="7" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="600" y="345" text-anchor="middle" font-size="9" fill="#b91c1c">λ=(0,1,0,0,0)</text>
+  <text x="600" y="333" text-anchor="middle" font-size="9" fill="#64748b">min risk</text>
+
+  <circle cx="680" cy="255" r="7" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+  <text x="680" y="240" text-anchor="middle" font-size="9" fill="#d97706">λ balanced</text>
+  <text x="680" y="228" text-anchor="middle" font-size="9" fill="#64748b">Sharpe focus</text>
+
+  <circle cx="780" cy="170" r="7" fill="#3b82f6" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="780" y="155" text-anchor="middle" font-size="9" fill="#2563eb">λ=(1,0,0,0,0)</text>
+  <text x="780" y="143" text-anchor="middle" font-size="9" fill="#64748b">max return</text>
+
+  <!-- Preference vector navigation -->
+  <path d="M 600,360 Q 650,290 680,255" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" fill="none" marker-end="url(#arrowBlueM)"/>
+  <path d="M 680,255 Q 730,210 780,170" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" fill="none" marker-end="url(#arrowBlueM)"/>
+  <text x="640" y="315" text-anchor="start" font-size="10" fill="#475569" font-style="italic">vary λ →</text>
+  <text x="640" y="327" text-anchor="start" font-size="10" fill="#475569" font-style="italic">navigate frontier</text>
+
+  <!-- Arrow: agent → pareto -->
+  <line x1="450" y1="295" x2="508" y2="255" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#arrowAmberM)"/>
+
+  <!-- Bottom: portfolio weights output -->
+  <rect x="250" y="370" width="200" height="60" rx="9" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="350" y="394" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">Portfolio Weights w*</text>
+  <text x="350" y="411" text-anchor="middle" font-size="10" fill="#166534">softmax(policy_head(h))</text>
+  <text x="350" y="425" text-anchor="middle" font-size="10" fill="#166534">Σwᵢ = 1, wᵢ ≥ 0</text>
+  <line x1="350" y1="313" x2="350" y2="368" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrowGreenM)"/>
+
+  <!-- Reward signals -->
+  <rect x="20" y="400" width="200" height="100" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="120" y="421" text-anchor="middle" font-size="12" font-weight="600" fill="#b91c1c">Reward Vector r(s,a)</text>
+  <text x="120" y="440" text-anchor="middle" font-size="10" fill="#dc2626">r₁ = portfolio return</text>
+  <text x="120" y="456" text-anchor="middle" font-size="10" fill="#dc2626">r₂ = −max_drawdown</text>
+  <text x="120" y="472" text-anchor="middle" font-size="10" fill="#dc2626">r₃ = −turnover_cost</text>
+  <text x="120" y="488" text-anchor="middle" font-size="10" fill="#dc2626">r₄ = −tracking_error</text>
+  <line x1="190" y1="450" x2="248" y2="395" stroke="#ef4444" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrowRedM)"/>
+</svg>
