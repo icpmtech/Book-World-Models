@@ -33,7 +33,8 @@ No part of this publication may be reproduced, distributed, or transmitted in an
 14. Price Prediction World Model: Forecasting Asset Prices with World Model Concepts
 15. Ontology-Driven World Models: From Palantir Foundry to LLM-Integrated Intelligence
 16. World Models for Algorithmic, HFT, and Institutional Execution Traders
-17. References
+17. Backtesting, Paper Trading, and Production Deployment of Trading World Models
+18. References
 
 ---
 
@@ -444,6 +445,44 @@ Both HFT and institutional execution World Models share the V-M-C foundation and
 > *"In financial markets, how you trade is as important as what you trade."*
 >
 > World Models for execution transform that insight from folk wisdom into a rigorous, simulatable, continuously improvable science.
+
+---
+
+## Chapter 17
+
+### Backtesting, Paper Trading, and Production Deployment of Trading World Models
+
+Chapters 15 and 16 established the theoretical and architectural foundations for trading World Models. This chapter addresses the critical transition from *model* to *deployed strategy*: how do practitioners validate, stress-test, paper-trade, and finally run a trading World Model with real capital?
+
+The gap between a model that performs well in simulation and one that survives contact with live markets is where most quantitative strategies fail.
+
+#### The Validation Hierarchy
+
+Before any trading World Model risks real capital, it must pass through a structured **validation hierarchy**:
+
+1. Unit tests on model components → 2. Historical simulation → 3. Walk-forward backtest → 4. Synthetic stress testing → 5. Paper trading → 6. Shadow mode → 7. Limited live deployment → 8. Full production
+
+Each level is a filter. A model that fails at Level 3 is not promoted to Level 4.
+
+#### Walk-Forward Backtesting
+
+Walk-forward backtesting enforces strict temporal separation — the model only sees data before each test window. The **Deflated Sharpe Ratio** (López de Prado & Bailey, 2014) corrects for the number of strategies tested, guarding against overfitting. Integrity checks flag excessive turnover (> 500% p.a.), regime-concentrated P&L (> 80% from one regime), and DSR below 0.95.
+
+#### Synthetic Market Simulation
+
+The World Model's generative capability enables stress scenarios that never occurred historically — flash crashes, volatility spikes, credit crises, rate shocks, and liquidity droughts — by injecting shock vectors into the latent space and rolling out probabilistic path distributions.
+
+#### Paper Trading and Shadow Mode
+
+Paper trading connects the model to a live feed without capital. **Maximum Mean Discrepancy (MMD)** detects distributional shift between the training environment and live markets — the earliest signal that the model is operating out-of-distribution. Shadow mode compares the World Model strategy to the live production strategy under identical conditions before capital is committed.
+
+#### Continuous Learning and Governance
+
+Three update strategies — periodic full retrain, online fine-tuning (low learning rate to prevent catastrophic forgetting), and regime-triggered retrain (MMD > 0.08) — keep the model current. Every production model is registered with a full provenance record (training data hash, hyperparameters, validation metrics, sign-off chain) and can be rolled back in under 60 seconds. Pre-trade risk controls satisfy MiFID II RTS 6 and SEC Rule 15c3-5 requirements.
+
+> *"A model that works in backtesting but fails in production is not a model — it is a hypothesis that happened to fit the past."*
+>
+> The validation hierarchy, continuous learning, and production monitoring frameworks described in this chapter are the scientific method applied to algorithmic trading — iterative, falsifiable, and continuously updated by new evidence.
 
 ---
 
