@@ -1,0 +1,111 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="500" fill="#f8fafc" rx="12"/>
+  <text x="450" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Sentiment Analysis Pipeline — News &amp; Social to Finance Signal</text>
+  <text x="450" y="54" text-anchor="middle" font-size="11" fill="#64748b">Raw Text → NLP Extraction → LLM Scoring → Signal Fusion → Market Impact</text>
+
+  <defs>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6366f1"/></marker>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+  </defs>
+
+  <!-- Step 1: Raw Inputs -->
+  <rect x="20" y="80" width="150" height="340" rx="8" fill="#ede9fe" stroke="#6366f1" stroke-width="2"/>
+  <text x="95" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#4338ca">Raw Inputs</text>
+  <line x1="30" y1="113" x2="160" y2="113" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="95" y="133" text-anchor="middle" font-size="10" fill="#4338ca">📰 News articles</text>
+  <text x="95" y="153" text-anchor="middle" font-size="10" fill="#4338ca">🐦 Tweets / Posts</text>
+  <text x="95" y="173" text-anchor="middle" font-size="10" fill="#4338ca">📋 SEC filings</text>
+  <text x="95" y="193" text-anchor="middle" font-size="10" fill="#4338ca">🎙 Earnings calls</text>
+  <text x="95" y="213" text-anchor="middle" font-size="10" fill="#4338ca">📊 Analyst reports</text>
+  <text x="95" y="233" text-anchor="middle" font-size="10" fill="#4338ca">💬 Reddit threads</text>
+  <text x="95" y="253" text-anchor="middle" font-size="10" fill="#4338ca">📡 Press releases</text>
+  <text x="95" y="273" text-anchor="middle" font-size="10" fill="#4338ca">🌐 Web scrapes</text>
+  <text x="95" y="300" text-anchor="middle" font-size="9" fill="#6366f1" font-weight="600">Volume: ~50k items/day</text>
+  <text x="95" y="316" text-anchor="middle" font-size="9" fill="#6366f1">Multi-language</text>
+  <text x="95" y="332" text-anchor="middle" font-size="9" fill="#6366f1">Noisy · Redundant</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="170" y1="250" x2="195" y2="250" stroke="#6366f1" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- Step 2: NLP Pre-processing -->
+  <rect x="195" y="80" width="145" height="340" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="267" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">NLP Pipeline</text>
+  <line x1="205" y1="113" x2="330" y2="113" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="267" y="133" text-anchor="middle" font-size="10" fill="#1e40af">Tokenization</text>
+  <text x="267" y="153" text-anchor="middle" font-size="10" fill="#1e40af">Named Entity Rec.</text>
+  <text x="267" y="173" text-anchor="middle" font-size="10" fill="#1e40af">Coreference resolve</text>
+  <text x="267" y="193" text-anchor="middle" font-size="10" fill="#1e40af">Language detect</text>
+  <text x="267" y="213" text-anchor="middle" font-size="10" fill="#1e40af">Ticker linking</text>
+  <text x="267" y="233" text-anchor="middle" font-size="10" fill="#1e40af">Deduplication</text>
+  <text x="267" y="253" text-anchor="middle" font-size="10" fill="#1e40af">Relevance filter</text>
+  <text x="267" y="273" text-anchor="middle" font-size="10" fill="#1e40af">Spam removal</text>
+  <text x="267" y="300" text-anchor="middle" font-size="9" fill="#3b82f6" font-weight="600">spaCy · NLTK</text>
+  <text x="267" y="316" text-anchor="middle" font-size="9" fill="#3b82f6">Transformers tokenizer</text>
+  <text x="267" y="332" text-anchor="middle" font-size="9" fill="#3b82f6">Elastic dedup index</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="340" y1="250" x2="365" y2="250" stroke="#6366f1" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- Step 3: LLM Sentiment Scoring -->
+  <rect x="365" y="80" width="165" height="340" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="447" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">LLM Scoring</text>
+  <line x1="375" y1="113" x2="520" y2="113" stroke="#fde68a" stroke-width="1"/>
+  <text x="447" y="133" text-anchor="middle" font-size="10" fill="#92400e">FinBERT score</text>
+  <text x="447" y="153" text-anchor="middle" font-size="10" fill="#92400e">GPT-4o chain-of-thought</text>
+  <text x="447" y="173" text-anchor="middle" font-size="10" fill="#92400e">Aspect-level sentiment</text>
+  <text x="447" y="193" text-anchor="middle" font-size="10" fill="#92400e">Event classification</text>
+  <text x="447" y="213" text-anchor="middle" font-size="10" fill="#92400e">Urgency / novelty score</text>
+  <text x="447" y="233" text-anchor="middle" font-size="10" fill="#92400e">Confidence calibration</text>
+  <text x="447" y="253" text-anchor="middle" font-size="10" fill="#92400e">Multi-ticker tagging</text>
+  <text x="447" y="273" text-anchor="middle" font-size="10" fill="#92400e">Structured JSON out</text>
+  <text x="447" y="298" text-anchor="middle" font-size="9" fill="#f59e0b" font-weight="600">score ∈ [-1.0, +1.0]</text>
+  <text x="447" y="314" text-anchor="middle" font-size="9" fill="#f59e0b">confidence ∈ [0,1]</text>
+  <text x="447" y="330" text-anchor="middle" font-size="9" fill="#f59e0b">event_type: str</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="530" y1="250" x2="555" y2="250" stroke="#6366f1" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- Step 4: Signal Fusion -->
+  <rect x="555" y="80" width="155" height="340" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="632" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Signal Fusion</text>
+  <line x1="565" y1="113" x2="700" y2="113" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="632" y="133" text-anchor="middle" font-size="10" fill="#166534">Source weighting</text>
+  <text x="632" y="153" text-anchor="middle" font-size="10" fill="#166534">Time decay (λ=0.95/hr)</text>
+  <text x="632" y="173" text-anchor="middle" font-size="10" fill="#166534">Volume normalization</text>
+  <text x="632" y="193" text-anchor="middle" font-size="10" fill="#166534">Sentiment momentum</text>
+  <text x="632" y="213" text-anchor="middle" font-size="10" fill="#166534">Cross-asset correlation</text>
+  <text x="632" y="233" text-anchor="middle" font-size="10" fill="#166534">Regime conditioning</text>
+  <text x="632" y="253" text-anchor="middle" font-size="10" fill="#166534">Contrarian detection</text>
+  <text x="632" y="273" text-anchor="middle" font-size="10" fill="#166534">Consensus aggregation</text>
+  <text x="632" y="298" text-anchor="middle" font-size="9" fill="#22c55e" font-weight="600">composite_S_t ∈ ℝᴺ</text>
+  <text x="632" y="314" text-anchor="middle" font-size="9" fill="#22c55e">per ticker × horizon</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="710" y1="250" x2="735" y2="250" stroke="#6366f1" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- Step 5: Market Impact -->
+  <rect x="735" y="80" width="145" height="340" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="807" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#6b21a8">Market Impact</text>
+  <line x1="745" y1="113" x2="870" y2="113" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="807" y="133" text-anchor="middle" font-size="10" fill="#6b21a8">Price impact model</text>
+  <text x="807" y="153" text-anchor="middle" font-size="10" fill="#6b21a8">Lag structure (0–48h)</text>
+  <text x="807" y="173" text-anchor="middle" font-size="10" fill="#6b21a8">Volatility amplification</text>
+  <text x="807" y="193" text-anchor="middle" font-size="10" fill="#6b21a8">Volume prediction</text>
+  <text x="807" y="213" text-anchor="middle" font-size="10" fill="#6b21a8">Options skew signal</text>
+  <text x="807" y="233" text-anchor="middle" font-size="10" fill="#6b21a8">Sector contagion</text>
+  <text x="807" y="253" text-anchor="middle" font-size="10" fill="#6b21a8">Earnings surprise est.</text>
+  <text x="807" y="273" text-anchor="middle" font-size="10" fill="#6b21a8">Alpha signal extraction</text>
+  <text x="807" y="298" text-anchor="middle" font-size="9" fill="#a855f7" font-weight="600">α_t → World Model</text>
+  <text x="807" y="314" text-anchor="middle" font-size="9" fill="#a855f7">→ Trade signal</text>
+  <text x="807" y="330" text-anchor="middle" font-size="9" fill="#a855f7">→ Risk overlay</text>
+
+  <!-- Bottom legend -->
+  <rect x="20" y="440" width="860" height="45" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="450" y="458" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Processing Latency Budget</text>
+  <text x="95" y="475" text-anchor="middle" font-size="9" fill="#475569">Ingestion: &lt;100ms</text>
+  <text x="267" y="475" text-anchor="middle" font-size="9" fill="#475569">NLP: &lt;200ms</text>
+  <text x="447" y="475" text-anchor="middle" font-size="9" fill="#475569">LLM: 0.5–2s (cached)</text>
+  <text x="632" y="475" text-anchor="middle" font-size="9" fill="#475569">Fusion: &lt;50ms</text>
+  <text x="807" y="475" text-anchor="middle" font-size="9" fill="#475569">Impact: &lt;20ms</text>
+</svg>

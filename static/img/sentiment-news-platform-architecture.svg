@@ -1,0 +1,170 @@
+<svg viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="1000" height="720" fill="#f8fafc" rx="12"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Sentiment·News·Finance World Model — Full Platform Architecture</text>
+  <text x="500" y="56" text-anchor="middle" font-size="12" fill="#64748b">Social Feeds · News APIs · Market Data · LLM Reasoning · World Model Core · Decision Engine</text>
+
+  <defs>
+    <marker id="arrowB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/></marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
+    <marker id="arrowA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+    <marker id="arrowP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/></marker>
+    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
+    <marker id="arrowT" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0891b2"/></marker>
+  </defs>
+
+  <!-- ── LAYER 1: DATA SOURCES ── -->
+  <rect x="20" y="75" width="950" height="130" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="30" y="96" font-size="11" font-weight="700" fill="#1d4ed8">LAYER 1 — DATA SOURCES</text>
+
+  <!-- Social Feeds -->
+  <rect x="30" y="105" width="130" height="85" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="95" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Social Feeds</text>
+  <text x="95" y="145" text-anchor="middle" font-size="9" fill="#1e40af">Twitter/X · Reddit</text>
+  <text x="95" y="159" text-anchor="middle" font-size="9" fill="#1e40af">StockTwits · Telegram</text>
+  <text x="95" y="173" text-anchor="middle" font-size="9" fill="#1e40af">LinkedIn · Discord</text>
+
+  <!-- News APIs -->
+  <rect x="175" y="105" width="130" height="85" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="240" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">News APIs</text>
+  <text x="240" y="145" text-anchor="middle" font-size="9" fill="#92400e">NewsAPI · Benzinga</text>
+  <text x="240" y="159" text-anchor="middle" font-size="9" fill="#92400e">Reuters · Bloomberg</text>
+  <text x="240" y="173" text-anchor="middle" font-size="9" fill="#92400e">Alpha Vantage News</text>
+
+  <!-- Financial APIs -->
+  <rect x="320" y="105" width="130" height="85" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="385" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Financial APIs</text>
+  <text x="385" y="145" text-anchor="middle" font-size="9" fill="#166534">Yahoo Finance</text>
+  <text x="385" y="159" text-anchor="middle" font-size="9" fill="#166534">Polygon · Quandl</text>
+  <text x="385" y="173" text-anchor="middle" font-size="9" fill="#166534">FRED · IEX Cloud</text>
+
+  <!-- SEC / Filings -->
+  <rect x="465" y="105" width="130" height="85" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="530" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8">SEC / Filings</text>
+  <text x="530" y="145" text-anchor="middle" font-size="9" fill="#6b21a8">EDGAR · 10-K/10-Q</text>
+  <text x="530" y="159" text-anchor="middle" font-size="9" fill="#6b21a8">Earnings Calls</text>
+  <text x="530" y="173" text-anchor="middle" font-size="9" fill="#6b21a8">Analyst Reports</text>
+
+  <!-- Macro Data -->
+  <rect x="610" y="105" width="130" height="85" rx="6" fill="#fff1f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="675" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">Macro Data</text>
+  <text x="675" y="145" text-anchor="middle" font-size="9" fill="#991b1b">Fed / ECB / BoJ</text>
+  <text x="675" y="159" text-anchor="middle" font-size="9" fill="#991b1b">CPI · NFP · PMI</text>
+  <text x="675" y="173" text-anchor="middle" font-size="9" fill="#991b1b">Yield Curves · VIX</text>
+
+  <!-- Alternative Data -->
+  <rect x="755" y="105" width="130" height="85" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="820" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46">Alternative Data</text>
+  <text x="820" y="145" text-anchor="middle" font-size="9" fill="#065f46">Satellite · Web Scrape</text>
+  <text x="820" y="159" text-anchor="middle" font-size="9" fill="#065f46">Google Trends</text>
+  <text x="820" y="173" text-anchor="middle" font-size="9" fill="#065f46">Options Flow · Dark Pool</text>
+
+  <!-- ── LAYER 2: INGESTION & PREPROCESSING ── -->
+  <rect x="20" y="225" width="950" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="30" y="245" font-size="11" font-weight="700" fill="#166534">LAYER 2 — INGESTION &amp; PREPROCESSING</text>
+
+  <rect x="30" y="255" width="195" height="55" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="127" y="277" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Stream Ingestion</text>
+  <text x="127" y="293" text-anchor="middle" font-size="9" fill="#166534">Kafka · WebSockets · REST polling</text>
+  <text x="127" y="306" text-anchor="middle" font-size="9" fill="#166534">Rate-limit management · Deduplication</text>
+
+  <rect x="240" y="255" width="195" height="55" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="337" y="277" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Text Normalization</text>
+  <text x="337" y="293" text-anchor="middle" font-size="9" fill="#166534">Tokenization · Entity linking</text>
+  <text x="337" y="306" text-anchor="middle" font-size="9" fill="#166534">Language detection · Denoising</text>
+
+  <rect x="450" y="255" width="195" height="55" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="547" y="277" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Market Normalization</text>
+  <text x="547" y="293" text-anchor="middle" font-size="9" fill="#166534">Adjust splits/dividends · Align timestamps</text>
+  <text x="547" y="306" text-anchor="middle" font-size="9" fill="#166534">Rolling z-score · Feature engineering</text>
+
+  <rect x="660" y="255" width="305" height="55" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="812" y="277" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Time-Series Store</text>
+  <text x="812" y="293" text-anchor="middle" font-size="9" fill="#166534">TimescaleDB · InfluxDB · Redis Timeseries</text>
+  <text x="812" y="306" text-anchor="middle" font-size="9" fill="#166534">Hot tier (ms) · Warm tier (days) · Cold tier (years)</text>
+
+  <!-- ── LAYER 3: AI / WORLD MODEL CORE ── -->
+  <rect x="20" y="345" width="950" height="175" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="30" y="365" font-size="11" font-weight="700" fill="#6b21a8">LAYER 3 — AI / WORLD MODEL CORE</text>
+
+  <!-- LLM Sentiment Engine -->
+  <rect x="30" y="375" width="200" height="130" rx="6" fill="#ede9fe" stroke="#a855f7" stroke-width="2"/>
+  <text x="130" y="398" text-anchor="middle" font-size="12" font-weight="700" fill="#6b21a8">LLM Sentiment Engine</text>
+  <line x1="40" y1="405" x2="220" y2="405" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="130" y="421" text-anchor="middle" font-size="9" fill="#6b21a8">GPT-4o / Claude 3.5</text>
+  <text x="130" y="435" text-anchor="middle" font-size="9" fill="#6b21a8">FinBERT fine-tuning</text>
+  <text x="130" y="449" text-anchor="middle" font-size="9" fill="#6b21a8">RAG over filings DB</text>
+  <text x="130" y="463" text-anchor="middle" font-size="9" fill="#6b21a8">Structured JSON output</text>
+  <text x="130" y="477" text-anchor="middle" font-size="9" font-weight="600" fill="#a855f7">→ Sentiment score [-1,+1]</text>
+  <text x="130" y="491" text-anchor="middle" font-size="9" font-weight="600" fill="#a855f7">→ Event type · Impact score</text>
+  <text x="130" y="497" text-anchor="middle" font-size="9" font-weight="600" fill="#a855f7">→ Named entities · Topics</text>
+
+  <!-- World Model Core -->
+  <rect x="245" y="375" width="210" height="130" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="350" y="398" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">World Model Core</text>
+  <line x1="255" y1="405" x2="445" y2="405" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="350" y="421" text-anchor="middle" font-size="9" fill="#1e40af">RSSM Dynamics Model</text>
+  <text x="350" y="435" text-anchor="middle" font-size="9" fill="#1e40af">Latent state z_t ∈ ℝ³²⁰</text>
+  <text x="350" y="449" text-anchor="middle" font-size="9" fill="#1e40af">Market + Sentiment fusion</text>
+  <text x="350" y="463" text-anchor="middle" font-size="9" fill="#1e40af">Multi-horizon prediction</text>
+  <text x="350" y="477" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">→ P(price_t+k | z_t, s_t)</text>
+  <text x="350" y="491" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">→ Volatility regime</text>
+  <text x="350" y="499" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">→ Scenario fan-chart</text>
+
+  <!-- Causal Graph Engine -->
+  <rect x="470" y="375" width="195" height="130" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="567" y="398" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Causal Graph Engine</text>
+  <line x1="480" y1="405" x2="655" y2="405" stroke="#fde68a" stroke-width="1"/>
+  <text x="567" y="421" text-anchor="middle" font-size="9" fill="#92400e">News → Price causality</text>
+  <text x="567" y="435" text-anchor="middle" font-size="9" fill="#92400e">Granger tests · DAG inference</text>
+  <text x="567" y="449" text-anchor="middle" font-size="9" fill="#92400e">Event impact attribution</text>
+  <text x="567" y="463" text-anchor="middle" font-size="9" fill="#92400e">Counterfactual simulation</text>
+  <text x="567" y="477" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">→ Causal strength map</text>
+  <text x="567" y="491" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">→ What-if scenarios</text>
+
+  <!-- Portfolio & Risk Engine -->
+  <rect x="680" y="375" width="285" height="130" rx="6" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="822" y="398" text-anchor="middle" font-size="12" font-weight="700" fill="#991b1b">Portfolio &amp; Risk Engine</text>
+  <line x1="690" y1="405" x2="955" y2="405" stroke="#fecaca" stroke-width="1"/>
+  <text x="822" y="421" text-anchor="middle" font-size="9" fill="#991b1b">Sentiment-aware position sizing</text>
+  <text x="822" y="435" text-anchor="middle" font-size="9" fill="#991b1b">Drawdown / VaR / CVaR guards</text>
+  <text x="822" y="449" text-anchor="middle" font-size="9" fill="#991b1b">LLM-based risk narrative</text>
+  <text x="822" y="463" text-anchor="middle" font-size="9" fill="#991b1b">Regime-conditional allocation</text>
+  <text x="822" y="477" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">→ Target weights</text>
+  <text x="822" y="491" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">→ Stop / alert levels</text>
+
+  <!-- ── LAYER 4: DECISION & OUTPUT ── -->
+  <rect x="20" y="540" width="950" height="100" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="30" y="560" font-size="11" font-weight="700" fill="#0c4a6e">LAYER 4 — DECISION &amp; OUTPUT</text>
+
+  <rect x="30" y="570" width="195" height="55" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="127" y="592" text-anchor="middle" font-size="11" font-weight="700" fill="#0c4a6e">Trading Signals</text>
+  <text x="127" y="607" text-anchor="middle" font-size="9" fill="#0c4a6e">Buy / Sell / Hold · Size</text>
+  <text x="127" y="621" text-anchor="middle" font-size="9" fill="#0c4a6e">Entry / Exit with confidence</text>
+
+  <rect x="240" y="570" width="195" height="55" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="337" y="592" text-anchor="middle" font-size="11" font-weight="700" fill="#0c4a6e">Dashboard &amp; Alerts</text>
+  <text x="337" y="607" text-anchor="middle" font-size="9" fill="#0c4a6e">Real-time sentiment heatmap</text>
+  <text x="337" y="621" text-anchor="middle" font-size="9" fill="#0c4a6e">Anomaly push notifications</text>
+
+  <rect x="450" y="570" width="195" height="55" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="547" y="592" text-anchor="middle" font-size="11" font-weight="700" fill="#0c4a6e">Explainability Layer</text>
+  <text x="547" y="607" text-anchor="middle" font-size="9" fill="#0c4a6e">LLM-generated rationale</text>
+  <text x="547" y="621" text-anchor="middle" font-size="9" fill="#0c4a6e">SHAP attribution · Audit trail</text>
+
+  <rect x="660" y="570" width="305" height="55" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="812" y="592" text-anchor="middle" font-size="11" font-weight="700" fill="#0c4a6e">Execution &amp; Feedback Loop</text>
+  <text x="812" y="607" text-anchor="middle" font-size="9" fill="#0c4a6e">Broker API · Paper trading · Backtester</text>
+  <text x="812" y="621" text-anchor="middle" font-size="9" fill="#0c4a6e">P&amp;L feedback → World Model retraining</text>
+
+  <!-- Inter-layer arrows (L1→L2) -->
+  <line x1="500" y1="205" x2="500" y2="223" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <!-- Inter-layer arrows (L2→L3) -->
+  <line x1="500" y1="325" x2="500" y2="343" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrowP)"/>
+  <!-- Inter-layer arrows (L3→L4) -->
+  <line x1="500" y1="520" x2="500" y2="538" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrowT)"/>
+
+  <!-- Feedback arrow L4→L3 -->
+  <path d="M 975 597 Q 990 440 975 375" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowR)"/>
+  <text x="982" y="488" font-size="9" fill="#ef4444" transform="rotate(-90,982,488)">Feedback</text>
+</svg>
