@@ -1,0 +1,110 @@
+<svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="860" height="520" fill="#f8fafc" rx="12"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Finance Signal Fusion — Multi-Source Alpha Construction</text>
+  <text x="430" y="54" text-anchor="middle" font-size="11" fill="#64748b">Sentiment · Technical · Fundamental · Macro → Composite Alpha Signal → Portfolio</text>
+
+  <defs>
+    <marker id="fB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/></marker>
+    <marker id="fG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
+    <marker id="fA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+    <marker id="fP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/></marker>
+    <marker id="fR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
+  </defs>
+
+  <!-- Column 1: Signal Sources -->
+  <!-- Sentiment Signal -->
+  <rect x="20" y="80" width="175" height="95" rx="8" fill="#ede9fe" stroke="#6366f1" stroke-width="2"/>
+  <text x="107" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#4338ca">Sentiment Signal</text>
+  <line x1="30" y1="110" x2="185" y2="110" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="107" y="127" text-anchor="middle" font-size="10" fill="#4338ca">Social composite score</text>
+  <text x="107" y="143" text-anchor="middle" font-size="10" fill="#4338ca">News polarity + momentum</text>
+  <text x="107" y="159" text-anchor="middle" font-size="10" fill="#4338ca">Analyst revision drift</text>
+  <text x="107" y="168" text-anchor="middle" font-size="9" font-weight="600" fill="#6366f1">α_sent ∈ [-1,+1]</text>
+
+  <!-- Technical Signal -->
+  <rect x="20" y="195" width="175" height="95" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="107" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Technical Signal</text>
+  <line x1="30" y1="225" x2="185" y2="225" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="107" y="242" text-anchor="middle" font-size="10" fill="#1e40af">RSI · MACD · Bollinger</text>
+  <text x="107" y="258" text-anchor="middle" font-size="10" fill="#1e40af">Volume breakout · Trend</text>
+  <text x="107" y="274" text-anchor="middle" font-size="10" fill="#1e40af">Momentum 1m/3m/12m</text>
+  <text x="107" y="283" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">α_tech ∈ [-1,+1]</text>
+
+  <!-- Fundamental Signal -->
+  <rect x="20" y="310" width="175" height="95" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="107" y="333" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Fundamental Signal</text>
+  <line x1="30" y1="340" x2="185" y2="340" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="107" y="357" text-anchor="middle" font-size="10" fill="#166534">P/E · P/B · EV/EBITDA</text>
+  <text x="107" y="373" text-anchor="middle" font-size="10" fill="#166534">Earnings surprise · Beat rate</text>
+  <text x="107" y="389" text-anchor="middle" font-size="10" fill="#166534">FCF yield · Debt/equity</text>
+  <text x="107" y="398" text-anchor="middle" font-size="9" font-weight="600" fill="#22c55e">α_fund ∈ [-1,+1]</text>
+
+  <!-- Macro Signal -->
+  <rect x="20" y="425" width="175" height="75" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="107" y="448" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Macro Signal</text>
+  <line x1="30" y1="455" x2="185" y2="455" stroke="#fde68a" stroke-width="1"/>
+  <text x="107" y="472" text-anchor="middle" font-size="10" fill="#92400e">Yield curve · VIX regime</text>
+  <text x="107" y="488" text-anchor="middle" font-size="10" fill="#92400e">Credit spreads · DXY · Oil</text>
+
+  <!-- Arrows to fusion -->
+  <line x1="195" y1="127" x2="285" y2="255" stroke="#6366f1" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="195" y1="242" x2="285" y2="270" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="195" y1="357" x2="285" y2="285" stroke="#22c55e" stroke-width="1.5" marker-end="url(#fG)"/>
+  <line x1="195" y1="462" x2="285" y2="300" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#fA)"/>
+
+  <!-- Column 2: Fusion Engine -->
+  <rect x="285" y="210" width="215" height="155" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="392" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#f8fafc">Signal Fusion Engine</text>
+  <line x1="295" y1="243" x2="490" y2="243" stroke="#475569" stroke-width="1"/>
+  <text x="392" y="261" text-anchor="middle" font-size="10" fill="#94a3b8">Dynamic weighting (ICM)</text>
+  <text x="392" y="278" text-anchor="middle" font-size="10" fill="#94a3b8">α_t = Σ w_i(z_t) · α_i</text>
+  <text x="392" y="295" text-anchor="middle" font-size="10" fill="#94a3b8">w_i from World Model latent z_t</text>
+  <text x="392" y="312" text-anchor="middle" font-size="10" fill="#94a3b8">Regime-adaptive reweighting</text>
+  <text x="392" y="329" text-anchor="middle" font-size="10" fill="#94a3b8">Correlation decay · PCA orthog.</text>
+  <text x="392" y="346" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e">α_composite ∈ [-1,+1]</text>
+  <text x="392" y="358" text-anchor="middle" font-size="9" fill="#64748b">IC: 0.08  IR: 0.6  Turnover: 15%/mo</text>
+
+  <!-- Arrow fusion → portfolio optimizer -->
+  <line x1="500" y1="287" x2="570" y2="287" stroke="#22c55e" stroke-width="2" marker-end="url(#fG)"/>
+
+  <!-- Column 3: Portfolio Optimizer -->
+  <rect x="570" y="195" width="195" height="185" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="667" y="219" text-anchor="middle" font-size="12" font-weight="700" fill="#6b21a8">Portfolio Optimizer</text>
+  <line x1="580" y1="227" x2="755" y2="227" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="667" y="245" text-anchor="middle" font-size="10" fill="#6b21a8">Black-Litterman views</text>
+  <text x="667" y="262" text-anchor="middle" font-size="10" fill="#6b21a8">α_composite → views vector</text>
+  <text x="667" y="279" text-anchor="middle" font-size="10" fill="#6b21a8">CVaR constraint (5% max loss)</text>
+  <text x="667" y="296" text-anchor="middle" font-size="10" fill="#6b21a8">Turnover penalty (λ=0.003)</text>
+  <text x="667" y="313" text-anchor="middle" font-size="10" fill="#6b21a8">Sentiment-volatility overlay</text>
+  <text x="667" y="330" text-anchor="middle" font-size="10" fill="#6b21a8">Max sector exposure: 30%</text>
+  <text x="667" y="347" text-anchor="middle" font-size="10" fill="#6b21a8">LLM risk narrative check</text>
+  <text x="667" y="364" text-anchor="middle" font-size="10" font-weight="600" fill="#a855f7">→ Target weights w*</text>
+  <text x="667" y="375" text-anchor="middle" font-size="9" fill="#6b21a8">CVXPY / Riskfolio-Lib</text>
+
+  <!-- Arrow optimizer → output -->
+  <line x1="765" y1="287" x2="825" y2="287" stroke="#a855f7" stroke-width="2" marker-end="url(#fP)"/>
+
+  <!-- Column 4: Output -->
+  <rect x="825" y="195" width="15" height="185" rx="4" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+
+  <!-- Output labels -->
+  <rect x="700" y="80" width="140" height="95" rx="6" fill="#fff1f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="770" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">Output Signals</text>
+  <line x1="710" y1="110" x2="830" y2="110" stroke="#fecaca" stroke-width="1"/>
+  <text x="770" y="127" text-anchor="middle" font-size="10" fill="#991b1b">Rebalance orders</text>
+  <text x="770" y="143" text-anchor="middle" font-size="10" fill="#991b1b">Position size changes</text>
+  <text x="770" y="159" text-anchor="middle" font-size="10" fill="#991b1b">Stop-loss updates</text>
+  <text x="770" y="168" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">→ Broker execution API</text>
+
+  <line x1="770" y1="195" x2="770" y2="178" stroke="#ef4444" stroke-width="1.5" marker-end="url(#fR)"/>
+
+  <!-- Bottom: Performance tracking -->
+  <rect x="285" y="400" width="555" height="80" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="562" y="423" text-anchor="middle" font-size="12" font-weight="700" fill="#0c4a6e">Performance Attribution &amp; Feedback</text>
+  <text x="562" y="442" text-anchor="middle" font-size="10" fill="#0c4a6e">Brinson decomposition: sentiment α vs. technical α vs. macro α contribution</text>
+  <text x="562" y="459" text-anchor="middle" font-size="10" fill="#0c4a6e">Rolling IC per signal · Decay analysis · Walk-forward Sharpe per source</text>
+  <text x="562" y="476" text-anchor="middle" font-size="10" fill="#0c4a6e">Feedback: low-IC signals downweighted · World Model retrained on IC residuals</text>
+
+  <line x1="667" y1="382" x2="667" y2="398" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#fB)"/>
+  <line x1="392" y1="368" x2="392" y2="398" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#fB)"/>
+</svg>

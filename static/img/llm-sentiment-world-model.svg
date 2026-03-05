@@ -1,0 +1,122 @@
+<svg viewBox="0 0 880 600" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="880" height="600" fill="#f8fafc" rx="12"/>
+  <text x="440" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">LLM + Sentiment World Model — Closed-Loop Reasoning</text>
+  <text x="440" y="54" text-anchor="middle" font-size="11" fill="#64748b">Belief conditioning · Latent state update · Policy action · Reflection</text>
+
+  <defs>
+    <marker id="mB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/></marker>
+    <marker id="mA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+    <marker id="mG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
+    <marker id="mP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/></marker>
+    <marker id="mR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
+    <marker id="mC" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0891b2"/></marker>
+  </defs>
+
+  <!-- ── MARKET STATE (top-left) ── -->
+  <rect x="30" y="80" width="185" height="110" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="122" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Market State</text>
+  <line x1="40" y1="112" x2="205" y2="112" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="122" y="129" text-anchor="middle" font-size="10" fill="#1e40af">OHLCV · Order book · VIX</text>
+  <text x="122" y="146" text-anchor="middle" font-size="10" fill="#1e40af">Macro indicators (CPI, NFP)</text>
+  <text x="122" y="163" text-anchor="middle" font-size="10" fill="#1e40af">Technical features</text>
+  <text x="122" y="180" text-anchor="middle" font-size="10" font-weight="600" fill="#3b82f6">x_t ∈ ℝᴹ (quantitative)</text>
+
+  <!-- ── SENTIMENT STATE (top-right) ── -->
+  <rect x="665" y="80" width="185" height="110" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="757" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Sentiment State</text>
+  <line x1="675" y1="112" x2="840" y2="112" stroke="#fde68a" stroke-width="1"/>
+  <text x="757" y="129" text-anchor="middle" font-size="10" fill="#92400e">Social sentiment score</text>
+  <text x="757" y="146" text-anchor="middle" font-size="10" fill="#92400e">News polarity · Event flags</text>
+  <text x="757" y="163" text-anchor="middle" font-size="10" fill="#92400e">Analyst consensus</text>
+  <text x="757" y="180" text-anchor="middle" font-size="10" font-weight="600" fill="#f59e0b">s_t ∈ ℝᴷ (semantic)</text>
+
+  <!-- ── ENCODER (center-top) ── -->
+  <rect x="320" y="80" width="240" height="110" rx="8" fill="#eff6ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="440" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">Joint Encoder</text>
+  <line x1="330" y1="112" x2="550" y2="112" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="440" y="130" text-anchor="middle" font-size="10" fill="#3730a3">Cross-modal attention</text>
+  <text x="440" y="147" text-anchor="middle" font-size="10" fill="#3730a3">Market embedding + Sentiment embedding</text>
+  <text x="440" y="164" text-anchor="middle" font-size="10" fill="#3730a3">Layer-norm fusion → z_t</text>
+  <text x="440" y="181" text-anchor="middle" font-size="10" font-weight="600" fill="#6366f1">z_t = Enc(x_t, s_t) ∈ ℝ³²⁰</text>
+
+  <!-- Arrows to encoder -->
+  <line x1="215" y1="135" x2="318" y2="135" stroke="#3b82f6" stroke-width="2" marker-end="url(#mB)"/>
+  <line x1="663" y1="135" x2="562" y2="135" stroke="#f59e0b" stroke-width="2" marker-end="url(#mA)"/>
+
+  <!-- ── LLM BELIEF ENGINE (left-center) ── -->
+  <rect x="30" y="250" width="200" height="140" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="274" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">LLM Belief Engine</text>
+  <line x1="40" y1="282" x2="220" y2="282" stroke="#fde68a" stroke-width="1"/>
+  <text x="130" y="299" text-anchor="middle" font-size="10" fill="#92400e">GPT-4o / Claude 3.5</text>
+  <text x="130" y="316" text-anchor="middle" font-size="10" fill="#92400e">RAG: recent news context</text>
+  <text x="130" y="333" text-anchor="middle" font-size="10" fill="#92400e">Structured belief prompt</text>
+  <text x="130" y="350" text-anchor="middle" font-size="10" fill="#92400e">Chain-of-thought reasoning</text>
+  <text x="130" y="367" text-anchor="middle" font-size="10" font-weight="600" fill="#f59e0b">b_t: {direction, magnitude,</text>
+  <text x="130" y="381" text-anchor="middle" font-size="10" font-weight="600" fill="#f59e0b">   confidence, time_horizon}</text>
+
+  <!-- ── WORLD MODEL DYNAMICS (center) ── -->
+  <rect x="305" y="240" width="270" height="160" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="440" y="265" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">World Model Dynamics</text>
+  <line x1="315" y1="273" x2="565" y2="273" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="440" y="291" text-anchor="middle" font-size="10" fill="#166534">RSSM: deterministic + stochastic</text>
+  <text x="440" y="308" text-anchor="middle" font-size="10" fill="#166534">h_t = GRU(h_{t-1}, z_{t-1}, a_{t-1})</text>
+  <text x="440" y="325" text-anchor="middle" font-size="10" fill="#166534">z_t ~ p(z_t | h_t) · q(z_t | h_t, s_t)</text>
+  <text x="440" y="342" text-anchor="middle" font-size="10" fill="#166534">Reward model · Discount model</text>
+  <text x="440" y="359" text-anchor="middle" font-size="10" fill="#166534">Belief conditioning: z_cond = z_t + α·Δz(b_t)</text>
+  <text x="440" y="376" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e">P̂(price_{t+k}) · σ̂(vol) · ĥorizon</text>
+  <text x="440" y="392" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e">K=32 simulated trajectories</text>
+
+  <!-- ── POLICY (right-center) ── -->
+  <rect x="650" y="250" width="200" height="140" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="750" y="274" text-anchor="middle" font-size="12" font-weight="700" fill="#6b21a8">Agent Policy</text>
+  <line x1="660" y1="282" x2="840" y2="282" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="750" y="299" text-anchor="middle" font-size="10" fill="#6b21a8">Actor-Critic (PPO)</text>
+  <text x="750" y="316" text-anchor="middle" font-size="10" fill="#6b21a8">π(z_cond, b_t, portfolio)</text>
+  <text x="750" y="333" text-anchor="middle" font-size="10" fill="#6b21a8">Sentiment risk gate</text>
+  <text x="750" y="350" text-anchor="middle" font-size="10" fill="#6b21a8">Sharpe-aware objective</text>
+  <text x="750" y="367" text-anchor="middle" font-size="10" font-weight="600" fill="#a855f7">→ BUY/SELL/HOLD</text>
+  <text x="750" y="384" text-anchor="middle" font-size="10" font-weight="600" fill="#a855f7">→ Size · Stop · Target</text>
+
+  <!-- Arrows from encoder to world model -->
+  <line x1="440" y1="190" x2="440" y2="238" stroke="#6366f1" stroke-width="2" marker-end="url(#mB)"/>
+
+  <!-- LLM → World Model -->
+  <line x1="230" y1="320" x2="303" y2="320" stroke="#f59e0b" stroke-width="2" marker-end="url(#mA)"/>
+
+  <!-- World Model → Policy -->
+  <line x1="575" y1="320" x2="648" y2="320" stroke="#22c55e" stroke-width="2" marker-end="url(#mG)"/>
+
+  <!-- ── REFLECTION / MEMORY (bottom) ── -->
+  <rect x="200" y="460" width="480" height="90" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="440" y="484" text-anchor="middle" font-size="13" font-weight="700" fill="#0c4a6e">Reflection &amp; Memory Update</text>
+  <line x1="210" y1="491" x2="670" y2="491" stroke="#bae6fd" stroke-width="1"/>
+  <text x="440" y="508" text-anchor="middle" font-size="10" fill="#0c4a6e">Post-trade LLM introspection: "Why did sentiment diverge from price action?"</text>
+  <text x="440" y="524" text-anchor="middle" font-size="10" fill="#0c4a6e">Lesson extraction → vector memory store (FAISS) · Causal attribution update</text>
+  <text x="440" y="540" text-anchor="middle" font-size="10" fill="#0c4a6e">Updated beliefs injected into next LLM context window · World Model fine-tuned on errors</text>
+
+  <!-- Policy → Reflection -->
+  <line x1="750" y1="390" x2="750" y2="430" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="750" y1="430" x2="680" y2="458" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#mC)"/>
+
+  <!-- World Model → Reflection -->
+  <line x1="440" y1="402" x2="440" y2="458" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#mC)"/>
+
+  <!-- Reflection → LLM (feedback) -->
+  <path d="M 200 505 Q 80 505 80 390 Q 80 320 28 320" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#mC)"/>
+
+  <!-- Sentiment State → LLM -->
+  <path d="M 757 190 Q 757 220 400 230 Q 220 235 130 248" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#mA)"/>
+
+  <!-- ── LEGEND ── -->
+  <rect x="30" y="560" width="820" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="50" y1="575" x2="80" y2="575" stroke="#3b82f6" stroke-width="2" marker-end="url(#mB)"/>
+  <text x="90" y="579" font-size="9" fill="#475569">Quantitative</text>
+  <line x1="175" y1="575" x2="205" y2="575" stroke="#f59e0b" stroke-width="2" marker-end="url(#mA)"/>
+  <text x="215" y="579" font-size="9" fill="#475569">Semantic/LLM</text>
+  <line x1="310" y1="575" x2="340" y2="575" stroke="#22c55e" stroke-width="2" marker-end="url(#mG)"/>
+  <text x="350" y="579" font-size="9" fill="#475569">World Model state</text>
+  <line x1="460" y1="575" x2="490" y2="575" stroke="#a855f7" stroke-width="2" marker-end="url(#mP)"/>
+  <text x="500" y="579" font-size="9" fill="#475569">Policy action</text>
+  <line x1="590" y1="575" x2="620" y2="575" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#mC)"/>
+  <text x="630" y="579" font-size="9" fill="#475569">Reflection feedback</text>
+</svg>

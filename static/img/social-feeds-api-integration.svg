@@ -1,0 +1,127 @@
+<svg viewBox="0 0 920 620" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="620" fill="#f8fafc" rx="12"/>
+  <text x="460" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Social Feeds &amp; API Integration Layer</text>
+  <text x="460" y="54" text-anchor="middle" font-size="11" fill="#64748b">Multi-source real-time ingestion · Authentication · Rate limiting · Schema normalization</text>
+
+  <defs>
+    <marker id="aB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
+    <marker id="aA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+    <marker id="aP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/></marker>
+  </defs>
+
+  <!-- ── SOCIAL MEDIA SOURCES ── -->
+  <text x="110" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Social Media</text>
+
+  <rect x="20" y="95" width="185" height="55" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="112" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Twitter / X API v2</text>
+  <text x="112" y="131" text-anchor="middle" font-size="9" fill="#1e40af">Filtered Stream · Search · Quotes</text>
+  <text x="112" y="144" text-anchor="middle" font-size="9" fill="#1e40af">OAuth2 · 500k tweets/mo (Basic)</text>
+
+  <rect x="20" y="165" width="185" height="55" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="112" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Reddit API (PRAW)</text>
+  <text x="112" y="201" text-anchor="middle" font-size="9" fill="#1e40af">r/wallstreetbets · r/stocks</text>
+  <text x="112" y="214" text-anchor="middle" font-size="9" fill="#1e40af">OAuth2 · 60 req/min</text>
+
+  <rect x="20" y="235" width="185" height="55" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="112" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">StockTwits API</text>
+  <text x="112" y="271" text-anchor="middle" font-size="9" fill="#1e40af">Symbol streams · Trending</text>
+  <text x="112" y="284" text-anchor="middle" font-size="9" fill="#1e40af">Bearish/Bullish labels included</text>
+
+  <rect x="20" y="305" width="185" height="55" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="112" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Telegram / Discord</text>
+  <text x="112" y="341" text-anchor="middle" font-size="9" fill="#1e40af">Bot API · Webhook listener</text>
+  <text x="112" y="354" text-anchor="middle" font-size="9" fill="#1e40af">Channel monitoring · Group feeds</text>
+
+  <!-- ── NEWS / FINANCIAL NEWS ── -->
+  <text x="355" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">News &amp; Finance APIs</text>
+
+  <rect x="255" y="95" width="195" height="55" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="352" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">NewsAPI.org</text>
+  <text x="352" y="131" text-anchor="middle" font-size="9" fill="#92400e">70+ country sources · Keyword search</text>
+  <text x="352" y="144" text-anchor="middle" font-size="9" fill="#92400e">REST · API key · 100 req/day free</text>
+
+  <rect x="255" y="165" width="195" height="55" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="352" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">Benzinga / Refinitiv</text>
+  <text x="352" y="201" text-anchor="middle" font-size="9" fill="#92400e">Real-time financial news wire</text>
+  <text x="352" y="214" text-anchor="middle" font-size="9" fill="#92400e">Pre-classified sentiment tags</text>
+
+  <rect x="255" y="235" width="195" height="55" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="352" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">Alpha Vantage News</text>
+  <text x="352" y="271" text-anchor="middle" font-size="9" fill="#92400e">Ticker-level news + sentiment</text>
+  <text x="352" y="284" text-anchor="middle" font-size="9" fill="#92400e">Topics · Time-series alignment</text>
+
+  <rect x="255" y="305" width="195" height="55" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="352" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">EDGAR / SEC EDGAR API</text>
+  <text x="352" y="341" text-anchor="middle" font-size="9" fill="#92400e">10-K · 10-Q · 8-K filings</text>
+  <text x="352" y="354" text-anchor="middle" font-size="9" fill="#92400e">Full-text search API · No auth needed</text>
+
+  <!-- ── MARKET DATA ── -->
+  <text x="600" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Market Data APIs</text>
+
+  <rect x="500" y="95" width="195" height="55" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Polygon.io</text>
+  <text x="597" y="131" text-anchor="middle" font-size="9" fill="#166534">Stocks · Options · Forex · Crypto</text>
+  <text x="597" y="144" text-anchor="middle" font-size="9" fill="#166534">WebSocket stream · REST snapshots</text>
+
+  <rect x="500" y="165" width="195" height="55" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Yahoo Finance (yfinance)</text>
+  <text x="597" y="201" text-anchor="middle" font-size="9" fill="#166534">OHLCV · Dividends · Splits</text>
+  <text x="597" y="214" text-anchor="middle" font-size="9" fill="#166534">Fundamental data · Options chain</text>
+
+  <rect x="500" y="235" width="195" height="55" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">FRED API (Macro)</text>
+  <text x="597" y="271" text-anchor="middle" font-size="9" fill="#166534">500k+ economic series</text>
+  <text x="597" y="284" text-anchor="middle" font-size="9" fill="#166534">Fed releases · Yield curves · CPI</text>
+
+  <rect x="500" y="305" width="195" height="55" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">IEX Cloud / Tiingo</text>
+  <text x="597" y="341" text-anchor="middle" font-size="9" fill="#166534">Intraday OHLCV · News · Earnings</text>
+  <text x="597" y="354" text-anchor="middle" font-size="9" fill="#166534">REST + WebSocket · Affordable tiers</text>
+
+  <!-- ── ALTERNATIVE DATA ── -->
+  <text x="810" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#6b21a8">Alternative Data</text>
+
+  <rect x="720" y="95" width="175" height="55" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="807" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8">Google Trends API</text>
+  <text x="807" y="131" text-anchor="middle" font-size="9" fill="#6b21a8">Ticker search interest</text>
+  <text x="807" y="144" text-anchor="middle" font-size="9" fill="#6b21a8">Pytrends · Daily / weekly</text>
+
+  <rect x="720" y="165" width="175" height="55" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="807" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8">Options Flow (Unusual)</text>
+  <text x="807" y="201" text-anchor="middle" font-size="9" fill="#6b21a8">Large options block trades</text>
+  <text x="807" y="214" text-anchor="middle" font-size="9" fill="#6b21a8">Dark pool prints · Short interest</text>
+
+  <rect x="720" y="235" width="175" height="55" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="807" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8">Web Scraping Layer</text>
+  <text x="807" y="271" text-anchor="middle" font-size="9" fill="#6b21a8">Selenium · Playwright</text>
+  <text x="807" y="284" text-anchor="middle" font-size="9" fill="#6b21a8">Scrapy · BeautifulSoup</text>
+
+  <rect x="720" y="305" width="175" height="55" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="807" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8">Satellite / ESG Data</text>
+  <text x="807" y="341" text-anchor="middle" font-size="9" fill="#6b21a8">Orbital Insight · Refinitiv ESG</text>
+  <text x="807" y="354" text-anchor="middle" font-size="9" fill="#6b21a8">Carbon · Supply chain signals</text>
+
+  <!-- ── UNIFIED API GATEWAY ── -->
+  <rect x="20" y="390" width="875" height="80" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="460" y="418" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Unified API Gateway &amp; Event Bus</text>
+  <text x="460" y="437" text-anchor="middle" font-size="10" fill="#94a3b8">Rate-limit management · Auth token rotation · Retry / circuit-breaker · Schema normalization · Kafka topics</text>
+  <text x="460" y="453" text-anchor="middle" font-size="10" fill="#94a3b8">Connector: REST adapter → Avro schema → topic:{social, news, market, alt} → Consumer groups</text>
+  <text x="460" y="467" text-anchor="middle" font-size="10" fill="#64748b">Dead-letter queue · Backpressure control · End-to-end latency monitoring (P99 &lt; 500ms)</text>
+
+  <!-- Arrows from each column to gateway -->
+  <line x1="112" y1="362" x2="112" y2="388" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#aB)"/>
+  <line x1="352" y1="362" x2="352" y2="388" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#aA)"/>
+  <line x1="597" y1="362" x2="597" y2="388" stroke="#22c55e" stroke-width="1.5" marker-end="url(#aG)"/>
+  <line x1="807" y1="362" x2="807" y2="388" stroke="#a855f7" stroke-width="1.5" marker-end="url(#aP)"/>
+
+  <!-- ── DOWNSTREAM OUTPUT ── -->
+  <rect x="20" y="500" width="875" height="55" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="460" y="523" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">Downstream Consumers</text>
+  <text x="200" y="542" text-anchor="middle" font-size="10" fill="#166534">Sentiment Pipeline</text>
+  <text x="390" y="542" text-anchor="middle" font-size="10" fill="#166534">World Model Feature Store</text>
+  <text x="580" y="542" text-anchor="middle" font-size="10" fill="#166534">LLM Context Enrichment</text>
+  <text x="770" y="542" text-anchor="middle" font-size="10" fill="#166534">Real-time Dashboard</text>
+
+  <line x1="460" y1="472" x2="460" y2="498" stroke="#10b981" stroke-width="2" marker-end="url(#aG)"/>
+</svg>
