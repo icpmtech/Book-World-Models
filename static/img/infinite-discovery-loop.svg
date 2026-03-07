@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="640" fill="#0f1117" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="17" font-weight="bold" fill="#e8eaf6">Infinite Discovery Engine — Finance World Model Loop</text>
+
+  <!-- Outer loop ring (dashed) -->
+  <ellipse cx="450" cy="340" rx="390" ry="260" fill="none" stroke="#4a90d9" stroke-width="2" stroke-dasharray="12 6" opacity="0.5"/>
+
+  <!-- ∞ symbol in the center background -->
+  <text x="450" y="370" text-anchor="middle" font-size="110" fill="#1a2a4a" font-weight="bold" opacity="0.4">∞</text>
+
+  <!-- Node: Market Data Ingestion (top) -->
+  <rect x="315" y="60" width="270" height="60" rx="10" fill="#1565c0" stroke="#4a90d9" stroke-width="1.5"/>
+  <text x="450" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#e3f2fd">Market Data Ingestion</text>
+  <text x="450" y="104" text-anchor="middle" font-size="11" fill="#90caf9">OHLCV · Order Book · News · Macro · Alt Data</text>
+
+  <!-- Node: World Model Encoder (left) -->
+  <rect x="50" y="220" width="200" height="70" rx="10" fill="#283593" stroke="#5c6bc0" stroke-width="1.5"/>
+  <text x="150" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8eaf6">World Model</text>
+  <text x="150" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8eaf6">Encoder</text>
+  <text x="150" y="282" text-anchor="middle" font-size="11" fill="#9fa8da">Latent State z_t</text>
+
+  <!-- Node: Rules Engine (right) -->
+  <rect x="650" y="220" width="200" height="70" rx="10" fill="#1b5e20" stroke="#66bb6a" stroke-width="1.5"/>
+  <text x="750" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8f5e9">Rules Engine</text>
+  <text x="750" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8f5e9">∞ Loop</text>
+  <text x="750" y="282" text-anchor="middle" font-size="11" fill="#a5d6a7">Pattern · Signal · Rule</text>
+
+  <!-- Node: Knowledge Graph (bottom-left) -->
+  <rect x="50" y="430" width="200" height="70" rx="10" fill="#4a148c" stroke="#ab47bc" stroke-width="1.5"/>
+  <text x="150" y="458" text-anchor="middle" font-size="13" font-weight="bold" fill="#f3e5f5">Knowledge</text>
+  <text x="150" y="474" text-anchor="middle" font-size="13" font-weight="bold" fill="#f3e5f5">Graph</text>
+  <text x="150" y="492" text-anchor="middle" font-size="11" fill="#ce93d8">Finance Ontology</text>
+
+  <!-- Node: Hypothesis Generator (bottom-right) -->
+  <rect x="650" y="430" width="200" height="70" rx="10" fill="#bf360c" stroke="#ff7043" stroke-width="1.5"/>
+  <text x="750" y="458" text-anchor="middle" font-size="13" font-weight="bold" fill="#fbe9e7">Hypothesis</text>
+  <text x="750" y="474" text-anchor="middle" font-size="13" font-weight="bold" fill="#fbe9e7">Generator</text>
+  <text x="750" y="492" text-anchor="middle" font-size="11" fill="#ffab91">LLM · Abduction</text>
+
+  <!-- Node: Discovery Store (bottom center) -->
+  <rect x="330" y="530" width="240" height="65" rx="10" fill="#006064" stroke="#26c6da" stroke-width="1.5"/>
+  <text x="450" y="556" text-anchor="middle" font-size="13" font-weight="bold" fill="#e0f7fa">Discovery Store</text>
+  <text x="450" y="573" text-anchor="middle" font-size="11" fill="#80deea">Validated Rules · Patterns · Signals</text>
+  <text x="450" y="589" text-anchor="middle" font-size="11" fill="#80deea">Ever-Growing Knowledge Base</text>
+
+  <!-- Node: Prediction &amp; Decision (center) -->
+  <rect x="340" y="295" width="220" height="70" rx="10" fill="#f57f17" stroke="#ffca28" stroke-width="1.5"/>
+  <text x="450" y="322" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff8e1">Prediction &amp;</text>
+  <text x="450" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff8e1">Decision Engine</text>
+  <text x="450" y="358" text-anchor="middle" font-size="11" fill="#ffe082">Buy · Sell · Hold · Size</text>
+
+  <!-- Arrows -->
+  <!-- Market Data → World Model Encoder -->
+  <line x1="315" y1="100" x2="250" y2="230" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- Market Data → Rules Engine -->
+  <line x1="585" y1="100" x2="650" y2="230" stroke="#66bb6a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <!-- World Model Encoder → Prediction Engine -->
+  <line x1="250" y1="265" x2="340" y2="320" stroke="#5c6bc0" stroke-width="2" marker-end="url(#arrow-indigo)"/>
+  <!-- Rules Engine → Prediction Engine -->
+  <line x1="650" y1="265" x2="560" y2="320" stroke="#66bb6a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <!-- Prediction Engine → Knowledge Graph -->
+  <line x1="380" y1="365" x2="230" y2="440" stroke="#ab47bc" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <!-- Prediction Engine → Hypothesis Generator -->
+  <line x1="520" y1="365" x2="670" y2="440" stroke="#ff7043" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <!-- Knowledge Graph → Discovery Store -->
+  <line x1="200" y1="500" x2="330" y2="550" stroke="#26c6da" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+  <!-- Hypothesis Generator → Discovery Store -->
+  <line x1="700" y1="500" x2="570" y2="550" stroke="#26c6da" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+  <!-- Discovery Store → Rules Engine (feedback loop) -->
+  <path d="M 570 540 Q 800 480 800 290" fill="none" stroke="#26c6da" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-cyan)"/>
+  <!-- Knowledge Graph → World Model Encoder (feedback) -->
+  <path d="M 100 430 Q 60 340 100 285" fill="none" stroke="#ab47bc" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-purple)"/>
+  <!-- Feedback label -->
+  <text x="810" y="390" font-size="10" fill="#26c6da">feedback</text>
+  <text x="810" y="402" font-size="10" fill="#26c6da">loop</text>
+  <text x="22" y="360" font-size="10" fill="#ab47bc">belief</text>
+  <text x="22" y="372" font-size="10" fill="#ab47bc">update</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a90d9"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#66bb6a"/>
+    </marker>
+    <marker id="arrow-indigo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#5c6bc0"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ab47bc"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ff7043"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#26c6da"/>
+    </marker>
+  </defs>
+</svg>

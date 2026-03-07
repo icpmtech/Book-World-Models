@@ -17,4 +17,5 @@
 15. [Ontology-Driven World Models: From Palantir Foundry to LLM-Integrated Intelligence](17-chapter-15.md)
 16. [Predicting the Next Price: World Models, LLMs, and Portfolio Ontology for Multi-Horizon Forecasting, Backtesting, and Economic-Event-Driven Trading](18-chapter-16.md)
 17. [World Models for Algorithmic/HFT, Institutional Execution, and Production Deployment](19-chapter-17.md)
-18. [References](14-references.md)
+18. [The Infinite Discovery Engine: Applying Rules-Loop Infinity to the Finance World Model](22-chapter-20.md)
+19. [References](14-references.md)
