@@ -80,6 +80,11 @@ const config: Config = {
           label: '📈 Market Pro',
         },
         {
+          to: '/book-pdf',
+          position: 'right',
+          label: '📄 Download PDF',
+        },
+        {
           href: 'https://github.com/icpmtech/Book-World-Models',
           label: 'GitHub',
           position: 'right',
